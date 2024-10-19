@@ -3275,9 +3275,7 @@ textarea {
   font-size: 15px;
   display: inline-block;
 }
-.bs-sidebar .bs-widget .wp-block-latest-posts li, .wp-block-latest-posts__list.wp-block-latest-posts li {
-  display: block;
-}
+
 .bs-widget .wp-block-latest-posts li:has(.wp-block-latest-posts__featured-image)::before, .wp-block-latest-posts li:has(.wp-block-latest-posts__featured-image)::before {
   display: none;
 }
@@ -3919,6 +3917,7 @@ footer.one .bs-footer-copyright .info-right {
   gap: 15px;
   flex-wrap: wrap;
   margin-bottom: 0;
+  padding-left: 0;
 }
 footer.one .bs-footer-copyright p {
   margin-bottom: 0;

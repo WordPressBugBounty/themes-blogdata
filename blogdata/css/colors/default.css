@@ -1074,7 +1074,10 @@ footer .consultup_contact_widget .bs-widget .title,
 }
 footer .bs-widget ul li,
 footer .bs-widget ul li a {
-	color: var(--ftwtext-color);
+	color: var(--ftwtext-color);	
+}
+footer .bs-widget .wp-block-categories-list li{
+	border-color: var(--border-color)
 }
 footer .text-input button.sub-link a {
 	color: var(--bg-color);

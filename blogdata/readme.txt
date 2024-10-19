@@ -1,11 +1,11 @@
 ﻿=== BlogData ===
 Contributors: Themeansar
 Author: Themeansar
-Requires at least: WordPress 4.7
+Requires at least: WordPress 5.4
 Tested up to: WordPress 6.6
-Requires PHP: 5.6
-Stable tag: 1.0.9.1
-Version: 1.0.9.1
+Requires PHP: 7.0
+Stable tag: 1.1.0
+Version: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -123,3 +123,6 @@ License: CC0 Public Domain
 = Version 1.0.9.1
 * Fixed Single Page RTL Styling Issue.
 * Fixed Single Page Styling Issue.
+
+= Version 1.1.0
+* Fixed Styling Issue.

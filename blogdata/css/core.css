@@ -2483,6 +2483,9 @@ header.bs-default {
   gap: 20px;
   margin-bottom: 25px;
 }
+.bs-info-author-block.py-4.px-3.mb-4 p{
+  margin: 0;
+}
 .bs-blog-post.single.head_one {
   min-height: 380px;
   height: 438px;
