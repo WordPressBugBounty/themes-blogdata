@@ -75,6 +75,39 @@
 .sm-clean ul ul ul ul ul a:active {
   border-left: 40px solid transparent;
 }
+/* For RTL */
+.rtl .sm-clean ul a, .rtl .sm-clean ul a:hover, .rtl .sm-clean ul a:focus, .rtl .sm-clean ul a:active {
+  border-left: 0px solid transparent;
+  border-right: 8px solid transparent;
+}
+.rtl .sm-clean ul ul a,
+.rtl .sm-clean ul ul a:hover,
+.rtl .sm-clean ul ul a:focus,
+.rtl .sm-clean ul ul a:active {
+  border-left: 0px solid transparent;
+  border-right: 16px solid transparent;
+}
+.rtl .sm-clean ul ul ul a,
+.rtl .sm-clean ul ul ul a:hover,
+.rtl .sm-clean ul ul ul a:focus,
+.rtl .sm-clean ul ul ul a:active {
+  border-left: 0px solid transparent;
+  border-right: 24px solid transparent;
+}
+.rtl .sm-clean ul ul ul ul a,
+.rtl .sm-clean ul ul ul ul a:hover,
+.rtl .sm-clean ul ul ul ul a:focus,
+.rtl .sm-clean ul ul ul ul a:active {
+  border-left: 0px solid transparent;
+  border-right: 32px solid transparent;
+}
+.rtl .sm-clean ul ul ul ul ul a,
+.rtl .sm-clean ul ul ul ul ul a:hover,
+.rtl .sm-clean ul ul ul ul ul a:focus,
+.rtl .sm-clean ul ul ul ul ul a:active {
+  border-left: 0px solid transparent;
+  border-right: 40px solid transparent;
+}
 
 @media (min-width: 991px) {
   /* Switch to desktop layout

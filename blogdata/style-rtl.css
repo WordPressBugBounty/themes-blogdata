@@ -82,3 +82,7 @@ span.customize-partial-edit-shortcut.customize-partial-edit-shortcut-blogdata_si
 span.customize-partial-edit-shortcut.customize-partial-edit-shortcut-blogdata_page_layout {
   width: 1px !important;
 }
+/* comments */
+.comment-body .fn a {
+    display: inline-block;
+}
