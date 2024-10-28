@@ -48,10 +48,10 @@ if (!function_exists('blogdata_header_image_section')) :
     if ( has_header_image() ) {
       $background_image = get_header_image(); 
       if($remove_header_image_overlay !== true) {
-        $over_color = ' style =background-color:'.$blogdata_header_overlay_color.'';
+        $over_color = 'background-color:'.$blogdata_header_overlay_color.'';
       } else { $over_color = ''; } ?>
       <div class="header-image-section" style="background:url('<?php echo esc_url( $background_image ); ?>') no-repeat;">
-        <div class="overlay"<?php echo esc_attr( $over_color ); ?>>
+        <div class="overlay" style ="<?php echo esc_attr( $over_color ); ?>">
         </div>
       </div>
     <?php } 

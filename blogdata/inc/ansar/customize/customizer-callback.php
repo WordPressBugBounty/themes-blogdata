@@ -17,42 +17,31 @@ if (!function_exists('blogdata_main_banner_section_status')) :
      *
      * @return bool Whether the control is active to the current preview.
      */
-    function blogdata_main_banner_section_status($control)
-    {
-
+    function blogdata_main_banner_section_status($control)  {
         if (true == $control->manager->get_setting('show_main_banner_section')->value()) {
             return true;
         } else {
             return false;
         }
-
     }
 
 endif;
 if (!function_exists('blogdata_menu_subscriber_section_status')) :
-
-    function blogdata_menu_subscriber_section_status($control)
-    {
+    function blogdata_menu_subscriber_section_status($control)    {
         if ($control->manager->get_setting('blogdata_menu_subscriber')->value() == true) {
             return true;
         } else {
             return false;
         }
-
     }
-
 endif;
 
 if (!function_exists('blogdata_blog_content_status')) :
-
-    function blogdata_blog_content_status($control)
-    {
+    function blogdata_blog_content_status($control)  {
         if ($control->manager->get_setting('blogdata_blog_content')->value() == 'excerpt') {
             return true;
         } else {
             return false;
         }
-
     }
-
 endif;

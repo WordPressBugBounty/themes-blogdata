@@ -5,8 +5,7 @@
  * @since blogdata
  *
  */
-function blogdata_footer_missed_section()
-{
+function blogdata_footer_missed_section() {
 $you_missed_enable = blogdata_get_option('you_missed_enable',);
 $you_missed_title = blogdata_get_option('you_missed_title');
 
