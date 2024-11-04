@@ -167,21 +167,6 @@ function blogdata_setup() {
 endif;
 add_action( 'after_setup_theme', 'blogdata_setup' );
 
-add_action( 'after_switch_theme', 'blogdata_theme_activation');
-
-function blogdata_theme_activation(){
-	$custom_posts = get_posts(
-		array(
-			'post_type' => 'post', 
-			'numberposts' => -1
-		)
-	);       
-
-	foreach ($custom_posts as $post) {         
-		update_post_meta($post->ID, 'post_image_type', 'list-blog');
-	}
-}
-
 function blogdata_the_custom_logo() {
 
 	if ( function_exists( 'the_custom_logo' ) ) {
