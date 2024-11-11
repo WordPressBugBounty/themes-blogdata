@@ -246,13 +246,8 @@ function blogdata_customize_partial_blogdata_menu_subscriber() {
     return get_theme_mod( 'blogdata_menu_subscriber' ); 
 }
 
-function blogdata_customize_partial_archive_page() {
-    if(is_archive()){
-        do_action('blogdata_action_archive_page_title');
-        do_action('blogdata_action_main_content_layouts');
-    }else{
-        do_action('blogdata_action_main_content_layouts');
-    }
+function blogdata_customize_partial_archive_page() { 
+    do_action('blogdata_action_main_content_layouts'); 
 }
 
 function blogdata_customize_partial_single_page() {
@@ -260,7 +255,6 @@ function blogdata_customize_partial_single_page() {
 }
 
 function blogdata_customize_partial_page() {
-    do_action('blogdata_action_archive_page_title'); 
     get_template_part('sections/page','data'); 
 }
 

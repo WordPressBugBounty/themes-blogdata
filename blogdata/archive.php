@@ -13,9 +13,9 @@ get_header(); ?>
 <main id="content" class="archive-class content">
     <!--container-->
     <div class="container" >
+        <?php do_action('blogdata_action_archive_page_title'); ?>
         <!--row-->
         <div class="row">
-            <?php do_action('blogdata_action_archive_page_title'); ?>
             <?php do_action('blogdata_action_main_content_layouts'); ?>
         </div>
         <!--/row-->
