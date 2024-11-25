@@ -113,7 +113,13 @@ if ( ! function_exists( 'blogdata_post_comments' ) ) :
     function blogdata_post_comments() { ?>
        <span class="comments-link"> 
             <a href="<?php the_permalink(); ?>">
-                <?php echo get_comments_number(); ?> <?php esc_html_e( get_comments_number() <= 1 ? __('Comment', 'blogdata') : __('Comments', 'blogdata')); ?>
+                <?php
+                if ( get_comments_number() == 0 ) {
+                    esc_html_e(  __('No Comments', 'blogdata') );
+                } else {
+                    echo get_comments_number() . ' ';
+                    esc_html_e( get_comments_number() == 1 ? __('Comment', 'blogdata') : __('Comments', 'blogdata') );
+                } ?>
             </a> 
         </span>
     <?php }
