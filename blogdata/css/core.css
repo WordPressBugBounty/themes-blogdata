@@ -3073,6 +3073,9 @@ textarea {
   padding: 20px;
   border-radius: 4px;
 }
+.bs-card-box.page-entry-title + .row .page-title{
+  display: none;
+}
 /* --------------------------------------
 =========================================
 	bs-sidebar

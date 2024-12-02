@@ -255,45 +255,41 @@ function blogdata_custom_width_css() {
   </style>';
 }
 
-if (!function_exists('get_archive_title')) :
-        
-    function get_archive_title($title)
-    {
+if (!function_exists('blogdata_get_archive_title')) :
+    function blogdata_get_archive_title($title) {
+      
         if (class_exists('WooCommerce')) {
             if (is_shop()) {
-                $title = 'Shop';
-            } elseif (is_product_category()) {
-                $title = single_term_title('', false);
-            } elseif (is_product_tag()) {
-                $title = single_term_title('', false);
+                return get_the_title(wc_get_page_id('shop'));
+            } elseif (is_product_category() || is_product_tag()) {
+                return single_term_title('', false);
             }
         }
 
         if (is_category()) {
-            $title = single_cat_title('', false);
+            return single_cat_title('', false);
         } elseif (is_tag()) {
-            $title = single_tag_title('', false);
+            return single_tag_title('', false);
         } elseif (is_author()) {
-            $title = get_the_author();
+            return get_the_author();
         } elseif (is_year()) {
-            $title = get_the_date('Y');
+            return get_the_date('Y');
         } elseif (is_month()) {
-            $title = get_the_date('F Y');
+            return get_the_date('F Y');
         } elseif (is_day()) {
-            $title = get_the_date('F j, Y');
+            return get_the_date('F j, Y');
         } elseif (is_post_type_archive()) {
-            $title = post_type_archive_title('', false);
+            return post_type_archive_title('', false);
         } elseif (is_single()) {
-            $title = '';
+            return '';
         } else {
-            $title = get_the_title();
+            return get_the_title();
         }
-        
+
         return $title;
     }
-
 endif;
-add_filter('get_the_archive_title', 'get_archive_title');
+add_filter('get_the_archive_title', 'blogdata_get_archive_title');
 
 if (!function_exists('blogdata_archive_page_title')) :
         

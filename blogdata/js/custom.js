@@ -293,8 +293,13 @@ $(document).ready(function(){
 
   // Check window size on resize
   window.addEventListener('resize', checkWindowSize);
-
-
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var pageTitle = document.querySelector('.bs-card-box.page-entry-title + .row .page-title');
+    if (pageTitle) {
+      pageTitle.remove();
+    }
+  });
 })(jQuery);
 
 
