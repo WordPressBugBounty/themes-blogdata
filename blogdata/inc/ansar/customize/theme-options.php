@@ -161,6 +161,7 @@ Blogdata_Customizer_Control::add_field(
         'default' => esc_html__('Oops! Page not found','blogdata'),
 		'section'  => '404_options',
         'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
 	)
 );
 // 404 page desc
@@ -172,6 +173,7 @@ Blogdata_Customizer_Control::add_field(
         'default' => esc_html__('We are sorry, but the page you are looking for does not exist.','blogdata'),
 		'section'  => '404_options',
         'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
 	)
 );
 // 404 page btn title
@@ -183,6 +185,7 @@ Blogdata_Customizer_Control::add_field(
         'default' => esc_html__('Go Back','blogdata'),
 		'section'  => '404_options',
         'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
 	)
 );
 // Blog Page Section.

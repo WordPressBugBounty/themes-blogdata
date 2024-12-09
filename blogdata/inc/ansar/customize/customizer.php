@@ -174,6 +174,18 @@ function blogdata_customize_register($wp_customize) {
             'selector'        => '.page-class > .container > .row', 
             'render_callback' => 'blogdata_customize_partial_page'
         ));
+        $wp_customize->selective_refresh->add_partial('blogdata_404_title', array(
+            'selector'        => '.bs-error-404 .subtitle', 
+            'render_callback' => 'blogdata_customize_partial_404_page_title'
+        ));
+        $wp_customize->selective_refresh->add_partial('blogdata_404_desc', array(
+            'selector'        => '.bs-error-404 .description', 
+            'render_callback' => 'blogdata_customize_partial_404_page_desc'
+        ));
+        $wp_customize->selective_refresh->add_partial('blogdata_404_btn_title', array(
+            'selector'        => '.bs-error-404 .btn-theme', 
+            'render_callback' => 'blogdata_customize_partial_404_page_btn'
+        ));
 	}
 
     $default = blogdata_get_default_theme_options();
@@ -244,6 +256,18 @@ function blogdata_customize_partial_sidebar_menu() {
 
 function blogdata_customize_partial_blogdata_menu_subscriber() {
     return get_theme_mod( 'blogdata_menu_subscriber' ); 
+}
+
+function blogdata_customize_partial_404_page_title() {
+    return get_theme_mod( 'blogdata_404_title' ); 
+}
+
+function blogdata_customize_partial_404_page_desc() {
+    return get_theme_mod( 'blogdata_404_desc' ); 
+}
+
+function blogdata_customize_partial_404_page_btn() {
+    return get_theme_mod( 'blogdata_404_btn_title' ); 
 }
 
 function blogdata_customize_partial_archive_page() { 
