@@ -1231,6 +1231,9 @@ footer input[type="search"] {
 	border-color: #ddd;
 }
 /*----woocommerce----*/
+button.wc-block-cart-item__remove-link:hover{
+	color: #a90e6d;
+}
 .woocommerce-cart table.cart td.actions .coupon .input-text {
 	border-color: #ebebeb;
 }

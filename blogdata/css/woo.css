@@ -414,7 +414,9 @@ table, th, td {
 .woocommerce-checkout .wc-block-components-text-input input[type=text],
 .woocommerce-checkout .wc-block-components-text-input input[type=url] {
 	border: 1px solid var(--border-color);
-	background: none;
+    background: none;
+    border-radius: 30px;
+    padding: 0;
 }
 .wc-block-components-form .wc-block-components-text-input input[type=text], .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input, .wc-block-components-form .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input {
     height: 55px;

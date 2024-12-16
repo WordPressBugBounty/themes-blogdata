@@ -779,6 +779,9 @@ header.bs-default {
   width: unset;
   border-radius: 0;
 }
+.right-nav a.bs-cart .bs-cart-total{
+  margin-right: 15px;
+}
 .right-nav a.bs-cart .bs-cart-count {
   width: 17px;
   height: 17px;
@@ -4038,6 +4041,14 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
 .align_cls:has(.list-blog){
   row-gap: 50px;
 }
+/* Cart CSS */
+.wc-block-cart__submit-button {
+  background: #a90e6d;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
 @media (min-width: 992px) and (max-width: 1200px) {
   .nav-wp {
     display: unset;
