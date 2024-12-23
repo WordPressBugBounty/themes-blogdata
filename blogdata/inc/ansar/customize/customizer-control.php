@@ -204,9 +204,9 @@ if ( ! class_exists( 'Blogdata_Upgrade_Control' ) ) {
         public function render_content() { ?>
             <div class="upgrade-to-pro-box customizer_blogdata_social_upgrade_to_pro" >
                 <p class="upgrade-to-pro-desc">
-                <span class="title"><?php echo esc_html('Unlock More Features Available in The Pro Version','blogdata'); ?></span><br>
+                <span class="title"><?php echo esc_html_e('Unlock More Features Available in The Pro Version','blogdata'); ?></span><br>
                     <a class="btn" href="<?php echo esc_url( 'https://themeansar.com/themes/blogdata-pro/' ); ?>" target="_blank">
-                        <?php echo esc_html('Upgrade to Pro','blogdata'); ?> 
+                        <?php esc_html_e('Upgrade to Pro','blogdata'); ?> 
                     </a>  
                 </p>
             </div>

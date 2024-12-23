@@ -21,14 +21,14 @@ function blogdata_side_menu_section() { ?>
       
       <div class="bs-card-box empty-sidebar">
         <div class="bs-widget-title one">
-          <h2 class='title'><?php echo esc_html( 'Header Toggle Sidebar', 'blogdata' ); ?></h3>
+          <h2 class='title'><?php esc_html_e( 'Header Toggle Sidebar', 'blogdata' ); ?></h3>
         </div>
         <p class='empty-sidebar-widget-text'>
-          <?php echo esc_html( 'This is an example widget to show how the Header Toggle Sidebar looks by default. You can add custom widgets from the', 'blogdata' ); ?>
+          <?php esc_html_e( 'This is an example widget to show how the Header Toggle Sidebar looks by default. You can add custom widgets from the', 'blogdata' ); ?>
           <a href='<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>' title='<?php esc_attr_e('widgets','blogdata'); ?>'>
-            <?php echo esc_html( 'widgets', 'blogdata' ); ?>
+            <?php esc_html_e( 'widgets', 'blogdata' ); ?>
           </a>
-          <?php echo esc_html( 'in the admin.', 'blogdata' ); ?>
+          <?php esc_html_e( 'in the admin.', 'blogdata' ); ?>
         </p>
       </div>
       <?php } ?>

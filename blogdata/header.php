@@ -57,9 +57,6 @@ if(is_home() || is_front_page()) {
         <!--mainfeatured end-->
         <?php
     }
-    if(is_active_sidebar('magazine-content')){
-        get_template_part('sidebar','magazine');
-    }
     do_action('blogdata_action_banner_advertisement');
 } 
 ?>
