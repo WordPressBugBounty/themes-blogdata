@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 5.4
 Tested up to: WordPress 6.7
 Requires PHP: 7.4
-Stable tag: 1.2.0
-Version: 1.2.0
+Stable tag: 1.2.1
+Version: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -157,3 +157,6 @@ License: CC0 Public Domain
 
 = Version 1.2.0
 * Added Search Page Function.
+
+= Version 1.2.1
+* Fixed Full Width Page Issue.
