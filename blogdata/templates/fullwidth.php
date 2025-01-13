@@ -13,7 +13,7 @@ get_header(); ?>
 <main id="content" class="fullwidth-class content">
   <div class="container">
     <!--==================== breadcrumb section ====================-->
-    <?php do_action('blogdata_breadcrumb_content'); ?>
+    <?php do_action('blogdata_action_archive_page_title'); ?>
     <div class="row">
       <div class="col-lg-12">
         <div class="bs-card-box wd-back">
