@@ -36,10 +36,11 @@ class blogdata_author_info extends WP_Widget {
 				<h4 class="title"><?php echo esc_html($instance['title']) ?></h4>
 			</div> 
             <!-- // bs-sec-title -->
-            <?php } 
-            if( !empty($instance['image_uri']) ): ?> 
+            <?php } ?>
             <div class="bs-author"> 
-                <img class="rounded-circle" src="<?php echo esc_url($instance['image_uri']); ?>" alt="<?php echo apply_filters('widget_title', $instance['name']); ?>" />
+                <?php if( !empty($instance['image_uri']) ){ ?> 
+                    <img class="rounded-circle" src="<?php echo esc_url($instance['image_uri']); ?>" alt="<?php echo apply_filters('widget_title', $instance['name']); ?>" />
+                <?php } ?>
                 <h4><?php echo $instance['name']; ?></h4>
                 <p><?php echo $instance['desc'] ?></p>
                 
@@ -71,7 +72,6 @@ class blogdata_author_info extends WP_Widget {
                     <?php } ?>
                 </ul>        
             </div>
-            <?php endif; ?>
         </div>
         <?php echo $after_widget . '<!-- End Author Widget -->';
 
