@@ -55,7 +55,12 @@ function blogdata_deprecated_hook_admin_notice() {
                         </div>
                         </div>
                         <div class="blogdata-notice_image">
-                            <img class="blogdata-screenshot" src="<?php echo esc_url( get_theme_file_uri() . '/images/customize.webp' ); ?>" alt="<?php esc_attr_e( 'BlogData', 'blogdata' ); ?>" />
+                        <?php 
+                        $image_url = get_theme_file_uri( '/images/customize.webp' );
+                        // Check if the file exists
+                        if ( file_exists( get_theme_file_path( '/images/customize.webp' ) ) ) { ?>
+                            <img class="blogdata-screenshot" src="<?php echo esc_url( $image_url ); ?>" alt="<?php esc_attr_e( 'Blogdata', 'blogdata' ); ?>" />
+                        <?php } ?>
                         </div>
                     </div>
                 </div>
