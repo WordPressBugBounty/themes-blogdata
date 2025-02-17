@@ -472,7 +472,9 @@ p {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+figure {
+  margin: 0 0 1rem;
+}
 /*---------------------------------------
 	Gradient Scroll Bar 
 -----------------------------------------*/
