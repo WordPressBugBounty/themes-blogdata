@@ -2640,6 +2640,9 @@ header.bs-default {
 .rtl .comment-list {
   padding: 0;
 }
+.comments-area.bs-card-box, .comments-area.bs-card-box p {
+  font-size: 1rem;
+}
 .comments-area .comment-body {
   border-radius: 20px;
   z-index: 0;

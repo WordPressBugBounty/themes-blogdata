@@ -2563,7 +2563,7 @@ header.bs-default {
   line-height: 1.5;
   font-weight: 400;
 }
-.bs-blog-post.single .small.single .edit-link {
+.bs-blog-post.single .small.single .edit-link, .page-class .bs-card-box .edit-link {
   font-size: 16px;
 }
 .bs-blog-post.single .bs-blog-meta .bs-author::before {
@@ -2629,6 +2629,9 @@ header.bs-default {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.comments-area.bs-card-box, .comments-area.bs-card-box p {
+  font-size: 1rem;
 }
 .comments-area .comment-body {
   border-radius: 20px;
