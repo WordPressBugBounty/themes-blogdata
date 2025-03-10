@@ -178,3 +178,6 @@ License: CC0 Public Domain
 
 = Version 1.2.7
 * Fixed Comments on pages.
+
+= Version 1.2.8
+* Added Featured Image Issue on Full Width Page.
