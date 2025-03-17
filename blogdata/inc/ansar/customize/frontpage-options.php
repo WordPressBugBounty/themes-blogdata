@@ -106,17 +106,11 @@ Blogdata_Customizer_Control::add_field(
 // Setting main_banner_section_background_image.
 Blogdata_Customizer_Control::add_field( 
 	array(
-		'type'     => 'cropped_image', 
+		'type'     => 'image', 
         'settings'  => 'main_banner_section_background_image',
         'label' => esc_html__('Background image', 'blogdata'),
-        'description' => sprintf(esc_html__('Recommended Size %1$s px X %2$s px', 'blogdata'), 1200, 720),
 		'section'  => 'frontpage_main_banner_section_settings',
-        'default' => '',
-        'width' => 1200,
-        'height' => 720,
-        'flex_width' => true,
-        'flex_height' => true,
-        'sanitize_callback' => 'absint', 
+        'sanitize_callback' => 'esc_url_raw', 
         'active_callback' => 'blogdata_main_banner_section_status'
 	)
 );

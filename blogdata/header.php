@@ -17,12 +17,7 @@
 </head>
 <?php 
 $theme_layout = get_theme_mod('blogdata_theme_layout_options','wide');
-$main_banner_section_background_image = get_theme_mod('main_banner_section_background_image', '');
-function get_main_banner_section_background_image_url() {
-    if ( get_theme_mod( 'main_banner_section_background_image' ) > 0 ) {
-        return wp_get_attachment_url( get_theme_mod( 'main_banner_section_background_image' ) );
-    }
-}
+
 if($theme_layout == "boxed")
 { $class="boxed bodyback"; }
 else
@@ -40,10 +35,11 @@ else
     do_action('blogdata_action_header_type_section');
   $blogdata_enable_main_slider = blogdata_get_option('show_main_banner_section');
   $slider_position = get_theme_mod('main_slider_position', 'left') == 'left' ? '' : ' row-reverse';
+  $main_banner_section_background_image = get_theme_mod('main_banner_section_background_image', '');
 if(is_home() || is_front_page()) {  
     if($blogdata_enable_main_slider){ ?>
         <!--mainfeatured start-->
-        <div class="mainfeatured <?php if (!empty($main_banner_section_background_image)) { echo' over mt-0'; }?>" style="background-image: url('<?php echo esc_attr( get_main_banner_section_background_image_url() ); ?>')">
+        <div class="mainfeatured five<?php if (!empty($main_banner_section_background_image)) { echo' over mt-0';?>" style="background-image: url('<?php echo $main_banner_section_background_image; ?>')" <?php } else { echo '"';} ?>>
             <div class="featinner">
                 <!--container-->
                 <div class="container">
