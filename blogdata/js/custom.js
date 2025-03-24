@@ -102,33 +102,34 @@
   /* =================================
   ===         SCROLL TOP       ====
   =================================== */
-  var scrollToTopBtn = document.querySelector(".bs_upscr");
-  var rootElement = document.documentElement;
-  
-  function handleScroll() {
-    // Do something on scroll
-    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-    if (rootElement.scrollTop / scrollTotal > 0.05) {
-      // Show button
-      scrollToTopBtn.classList.add("showBtn");
-    } else {
-      // Hide button
-      scrollToTopBtn.classList.remove("showBtn");
-    }
-  }
-  
-  function scrollToTop() {
-    // Scroll to top logic
-    rootElement.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-  if (scrollToTopBtn) {
-    scrollToTopBtn.addEventListener("click", scrollToTop);
-    document.addEventListener("scroll", handleScroll);
-  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var scrollToTopBtn = document.querySelector(".bs_upscr");
+    var rootElement = document.documentElement || document.body; // Ensure cross-browser support
 
+    function handleScroll() {
+      var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (scrollTop / scrollTotal > 0.05) {
+        // Show button
+        scrollToTopBtn.classList.add("showBtn");
+      } else {
+        // Hide button
+        scrollToTopBtn.classList.remove("showBtn");
+      }
+    }
+    function scrollToTop(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+    if (scrollToTopBtn) {
+      scrollToTopBtn.addEventListener("click", scrollToTop);
+      document.addEventListener("scroll", handleScroll);
+    }
+  });
 
   /* =================================
   ===         STICKY HEADER       ====
