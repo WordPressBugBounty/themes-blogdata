@@ -777,6 +777,9 @@ header.bs-default {
   z-index: 1;
   overflow: hidden;
 }
+.right-nav .msearch{
+  cursor: pointer;
+}
 .right-nav a.bs-cart {
   width: unset;
   border-radius: 0;
@@ -2617,6 +2620,10 @@ header.bs-default {
 }
 .bs-related-post-info .d-grid.column3{
   row-gap: 2rem;
+}
+/* Fix Categories  */
+.bs-related-post-info .bs-blog-post.three .bs-blog-category > *:not(:where(:nth-of-type(1),:nth-of-type(2),:nth-of-type(3),:nth-of-type(4))) {
+    display: none;
 }
 /*----- comments -----*/
 .bs-blog-post img {

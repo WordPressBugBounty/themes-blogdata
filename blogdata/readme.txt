@@ -187,3 +187,6 @@ License: CC0 Public Domain
 
 = Version 1.3.0
 * Fixed Scroll to Top JS.
+
+= Version 1.3.1
+* Fixed Single Page Styling Issues.
