@@ -8,7 +8,7 @@
     $featured_editor_posts = blogdata_get_posts( 2, $select_editor_news_category);    
     $featured_trending_posts = blogdata_get_posts( 1, $select_trending_news_category);
 ?>
-<div class="col-lg-5 col-md-6">
+<div class="col-lg-5">
     <div class="multi-post-widget mb-0 mt-3 mt-lg-0">
         <div class="inner_columns one">
         

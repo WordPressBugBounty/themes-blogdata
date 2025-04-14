@@ -44,7 +44,7 @@ if(is_home() || is_front_page()) {
                 <!--container-->
                 <div class="container">
                     <!--row-->  
-                    <div class="row gap-1 gap-md-0<?php echo esc_attr($slider_position)?>">
+                    <div class="row gap-1 gap-lg-0<?php echo esc_attr($slider_position)?>">
                         <?php do_action('blogdata_action_front_page_main_section_1'); ?>
                     </div><!--/row-->
                 </div><!--/container-->

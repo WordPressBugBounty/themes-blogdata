@@ -4,7 +4,7 @@
   $blogdata_all_posts_main = blogdata_get_posts($blogdata_number_of_post, $blogdata_slider_category);
    ?>
   <!--row-->
-  <div class="col-lg-7 col-md-6">
+  <div class="col-lg-7">
     <div class="mb-0">
       <div class="homemain bs swiper-container">
         <div class="swiper-wrapper">
