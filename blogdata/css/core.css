@@ -224,12 +224,6 @@ a:focus, button:focus{
   .container {
     max-width: 992px;
   }
-  .mb-md-0 {
-    margin-bottom: 0;
-  }
-  .gap-md-0{
-    gap: 0;
-  }
 }
 @media (min-width: 992px) {
   .container {
@@ -4303,7 +4297,7 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     right: 0.5rem;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
   .header-two .header-top .justify-space-between {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -4369,6 +4363,12 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
   }
   .footer.one .bs-footer-widget-area .bs-inner-wrap .lineleft {
     width: 0;
+  }
+  .mb-md-0 {
+    margin-bottom: 0;
+  }
+  .gap-md-0{
+    gap: 0;
   }
 }
 @media (min-width: 992px) {
