@@ -9,7 +9,7 @@
         <?php /* translators: %s: search term */
             printf( esc_html__( 'Search Results for: %s','blogdata'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
     </h2>
-    <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div id="list" <?php post_class('align_cls d-grid'); ?>>
     <?php if ( have_posts() ) : /* Start the Loop */
             while ( have_posts() ) : the_post(); ?>
             <div class="bs-blog-post list-blog">
@@ -21,7 +21,9 @@
                     <p><?php echo wp_trim_words( get_the_excerpt(), 20 ); ?></p>
                 </article> 
             </div> 
-        <?php endwhile; else :?> 
+        <?php endwhile; 
+            blogdata_post_pagination();
+            else : ?> 
         <h2><?php esc_html_e( "Nothing Found", 'blogdata' ); ?></h2>
         <div class="">
             <p>
@@ -30,5 +32,5 @@
             <?php get_search_form(); ?>
         </div><!-- .blog_con_mn -->
     <?php endif; ?>
-    </div>  
+    </div>
 </div>
