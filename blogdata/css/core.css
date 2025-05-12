@@ -511,6 +511,12 @@ html {
     font-size: 80%;
   }
 }
+/* Search Page */
+.search-results-count{
+	margin-bottom: 0;
+	font-size: 17px;
+	margin-top: 5px;
+}
 /*---------------------------------------
 	Gradient Scroll Bar 
 -----------------------------------------*/

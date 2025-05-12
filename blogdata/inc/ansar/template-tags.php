@@ -282,6 +282,9 @@ if (!function_exists('blogdata_get_archive_title')) :
             return post_type_archive_title('', false);
         } elseif (is_single()) {
             return '';
+        } elseif(is_search()){   
+            /* translators: %s: search term */
+            $title = sprintf( esc_html__( 'Search Results for: %s', 'blogdata' ), esc_html( get_search_query() ) );
         } else {
             return get_the_title();
         }
@@ -296,9 +299,15 @@ if (!function_exists('blogdata_archive_page_title')) :
     function blogdata_archive_page_title($title) { ?>
         <div class="bs-card-box page-entry-title">
             <?php if(!empty(get_the_archive_title())){ ?>
-            <h1 class="entry-title title mb-0"><?php echo get_the_archive_title();?></h1>
-            <?php } do_action('blogdata_breadcrumb_content'); ?>
-        </div>
+                <div class="page-entry-title-box">
+                <h1 class="entry-title title mb-0"><?php echo get_the_archive_title();?></h1>
+                <?php if(is_search()) {
+                    blogdata_search_count();
+                }
+                echo '</div>';
+            }
+            do_action('blogdata_breadcrumb_content'); ?>
+            </div>
         <?php
     }
 endif;
@@ -435,4 +444,28 @@ if( ! function_exists( 'blogdata_add_menu_description' ) ) :
         return $item_output;
     }
     add_filter( 'walker_nav_menu_start_el', 'blogdata_add_menu_description', 10, 4 );
+endif;
+
+
+if ( ! function_exists( 'blogdata_search_count' ) ) :
+    function blogdata_search_count() { 
+        global $wp_query;
+        $total_results = $wp_query->found_posts;
+        ?>
+        <!-- Results Count -->
+        <p class="search-results-count">
+            <?php
+            if ( $total_results > 0 ) {
+                // Translators: %s is the number of found results.
+                echo sprintf(
+                    _n( '%s result found', '%s results found', $total_results, 'blogdata' ),
+                    number_format_i18n( $total_results )
+                );
+            } else {
+                echo esc_html__( 'No results found', 'blogdata' );
+            }
+            ?>
+        </p>
+        <?php
+    }
 endif;

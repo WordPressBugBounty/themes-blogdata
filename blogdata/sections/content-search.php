@@ -5,10 +5,6 @@
  */
 ?>
 <div class="col-lg-<?php echo ( !is_active_sidebar( 'sidebar-1' ) ? '12' :'8' ); ?>">
-    <h2>
-        <?php /* translators: %s: search term */
-            printf( esc_html__( 'Search Results for: %s','blogdata'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
-    </h2>
     <div id="list" <?php post_class('align_cls d-grid'); ?>>
     <?php if ( have_posts() ) : /* Start the Loop */
             while ( have_posts() ) : the_post(); ?>
