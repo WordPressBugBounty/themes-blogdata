@@ -284,7 +284,7 @@ if (!function_exists('blogdata_get_archive_title')) :
             return '';
         } elseif(is_search()){   
             /* translators: %s: search term */
-            $title = sprintf( esc_html__( 'Search Results for: %s', 'blogdata' ), esc_html( get_search_query() ) );
+            return sprintf( esc_html__( 'Search Results for: %s', 'blogdata' ), esc_html( get_search_query() ) );
         } else {
             return get_the_title();
         }
