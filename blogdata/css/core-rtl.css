@@ -290,6 +290,7 @@ input[type=submit], button, .btn, .more-link {
   border-radius: 30px;
   border: none;
   font-size: 16px;
+  cursor: pointer;
 }
 .btn-theme:hover, .btn-theme:focus {
   transition: all 0.3s ease 0s;
@@ -830,6 +831,9 @@ header.bs-default {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+.right-nav a.bs-cart .bs-cart-total {
+    margin-left: 15px;
 }
 .right-nav .msearch{
   cursor: pointer;
@@ -2263,7 +2267,7 @@ header.bs-default {
   transition: 0.25s;
 }
 .bs-blog-meta span {
-  padding-right: 8px;
+  padding-left: 8px;
   font-size: 14px;
   font-weight: 600;
   display: flex;
@@ -2772,6 +2776,9 @@ header.bs-default {
   align-items: flex-start;
   flex-direction: row;
 }
+.comment-form .form-submit{
+  margin-bottom: 0;
+}
 .comment-meta .comment-metadata {
   margin: 0 0 0 5px;
 }
@@ -3056,7 +3063,7 @@ textarea {
 .wp-block-group .wp-block-heading.seven .title::before {
   content: "";
   width: 15px;
-  height: 15px;
+  height: 15px;       
   border-radius: 15px;
   display: inline-block;
   vertical-align: middle;
@@ -3076,7 +3083,7 @@ textarea {
   margin-bottom: 0;
 }
 .wp-block-search button.wp-block-search__button {
-  margin-left: 0;
+  margin-right: 0;
   line-height: 1;
   padding: 10px 15px;
   outline: none;
