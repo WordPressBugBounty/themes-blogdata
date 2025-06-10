@@ -13,7 +13,11 @@
                 <article class="small">
                     <?php blogdata_post_categories(); ?>
                     <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-                    <?php blogdata_post_meta(); ?> 
+                        <!-- Show meta for posts and other types, hide for pages in search results -->
+                        <?php if ( is_search() && get_post_type() === 'page' ) {}
+                        else {
+                            blogdata_post_meta();
+                        } ?>
                     <p><?php echo wp_trim_words( get_the_excerpt(), 20 ); ?></p>
                 </article> 
             </div> 
