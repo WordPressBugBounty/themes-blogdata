@@ -1983,8 +1983,11 @@ header.bs-default {
           backdrop-filter: blur(15px);
 }
 .bs-blog-post .small {
-  padding: 20px 0 0 0;
   font-size: 17px;
+  padding: 0;
+}
+.bs-blog-post .bs-blog-thumb + .small {
+  padding: 20px 0 0;
 }
 .bs-blog-thumb {
   position: relative;
@@ -2232,7 +2235,6 @@ header.bs-default {
   line-height: 1.2;
 }
 .bs-blog-post .small {
-  padding: 20px 0 0 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5rem;
@@ -2537,6 +2539,9 @@ header.bs-default {
 }
 .bs-info-author-block.py-4.px-3.mb-4 p{
   margin: 0;
+}
+.bs-info-author-block.py-4.px-3.mb-4 .flex-grow-1{
+  text-align: start;
 }
 .bs-blog-post.single.head_one {
   min-height: 380px;
@@ -4310,6 +4315,10 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
   .search-popup .search-inner .search-form{
     flex-direction: column;
   }
+	.search-results-count{
+		text-align: center;
+		font-size: 16px;
+	}
 }
 @media (max-width: 375px) {
   .justify-space-between {
