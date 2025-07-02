@@ -38,21 +38,30 @@ function blogdata_deprecated_hook_admin_notice() {
                         <p><?php esc_html_e("Thank you for choosing blogdata theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "blogdata");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "blogdata");?></a> <?php esc_html_e("plugin then use the demo importer and install the Blogdata Demo according to your need.", "blogdata"); ?></p>
 
                         <div class="panel-column-6">
-                        <a class="blogdata-btn-get-started button button-primary button-hero blogdata-button-padding" href="#" data-name="" data-slug=""><?php esc_html_e( 'Import Demo', 'blogdata' ) ?></a>
-
-                        <a class="blogdata-btn-get-started-customize button button-primary button-hero blogdata-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><?php esc_html_e( 'Customize Site', 'blogdata' ) ?></a>
-
-                        <div class="blogdata-documentation">
-                        <span aria-hidden="true" class="dashicons dashicons-external"></span>
-                         <a class="blogdata-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/blogdata-pro')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'blogdata' ) ?></a>
+                            <div class="blogdata-notice-buttons">
+                                <a class="blogdata-btn-get-started button button-primary button-hero blogdata-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Starter Sites', 'blogdata' ) ?></a>
+                                <a class="blogdata-btn-get-started-customize button button-primary button-hero blogdata-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'blogdata' ) ?></a>
+                            </div>
+                            <div class="blogdata-notice-links">
+                                <div class="blogdata-documentation blogdata-notice-link">
+                                    <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
+                                    <a class="blogdata-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/blogdata-lite/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'blogdata' ) ?></a>
+                                </div>
+                                <div class="blogdata-demos blogdata-notice-link">
+                                    <span aria-hidden="true" class="dashicons dashicons-images-alt"></span>
+                                    <a class="blogdata-demos" href="<?php echo esc_url('https://demos.themeansar.com/blogdata-demos')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'blogdata' ) ?></a>
+                                </div>
+                                <div class="blogdata-support blogdata-notice-link">
+                                    <span aria-hidden="true" class="dashicons dashicons-format-chat"></span>
+                                    <a class="blogdata-support" href="<?php echo esc_url('https://themeansar.ticksy.com/')?>" data-name="" data-slug=""><?php esc_html_e( 'Support', 'blogdata' ) ?></a>
+                                </div>
+                                <div class="blogdata-videos blogdata-notice-link">
+                                    <span aria-hidden="true" class="dashicons dashicons-video-alt3"></span>
+                                    <a class="blogdata-videos" href="<?php echo esc_url('https://www.youtube.com/watch?v=pLlN5K7ESZw&list=PLWpTqYqS4j-wUPeadc_pjVIcxXPCBtD0q')?>" data-name="" data-slug=""><?php esc_html_e( 'Video Tutorials', 'blogdata' ) ?></a>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="blogdata-demos">
-                        <span aria-hidden="true" class="dashicons dashicons-external"></span>
-                        <a class="blogdata-demos" href="<?php echo esc_url('https://demos.themeansar.com/blogdata-demos/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'blogdata' ) ?></a>
-                        </div>
-
-                        </div>
                         </div>
                         <div class="blogdata-notice_image">
                         <?php 

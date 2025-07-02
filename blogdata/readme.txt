@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 6.7
 Tested up to: WordPress 6.8
 Requires PHP: 7.4
-Stable tag: 1.4.1
-Version: 1.4.1
+Stable tag: 1.4.2
+Version: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -218,6 +218,8 @@ License: CC0 Public Domain
 = Version 1.4.0
 * Fixed Styling Issues.
 
-
 = Version 1.4.1
 * Added Starter Sites URL.
+
+= Version 1.4.2
+* Added Notice Links.

@@ -378,7 +378,6 @@ li.customize-control-color .wp-picker-container .wp-color-result.button {
 .dashicons-external:before {
   color: #2271b1;
 }
-.blogdata-documentation, .blogdata-demos{ display:inline; margin-right: 10px; margin-left: 5px; }
 .button.button-hero a::before {
   content: "\f17b";
   font-family: "dashicons";
@@ -386,13 +385,6 @@ li.customize-control-color .wp-picker-container .wp-color-result.button {
   font-size: 18px;
   padding-right: 5px;
   vertical-align: middle;
-}
-a.button.button-primary.button-hero.blogdata-button-padding {
-  margin-right: 10px;
-}
-.blogdata-notice_text .panel-column-6{
-  display: flex;
-  align-items: center;
 }
 .custom-radio-control .radio-button-label input + span {
   border: 1px solid #555;
@@ -465,4 +457,45 @@ li#accordion-section-blogdata_pro_upsell h3{
 }
 #accordion-section-blogdata_support_form .accordion-section-title:after, #accordion-section-blogdata_pro_upsell .accordion-section-title:after {
   content: '';
+}
+
+
+.blogdata-notice {
+  position: relative;
+  padding: 8px;
+}
+.blogdata-notice-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogdata-notice_text .panel-column-6{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.panel-column-6 .blogdata-notice-buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.panel-column-6 .blogdata-notice-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.blogdata-notice-link{ 
+  display:inline;
+  color: #222;
+}
+.admin-bar .blogdata-btn-get-started, .admin-bar .blogdata-btn-get-started-customize{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
