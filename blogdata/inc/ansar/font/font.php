@@ -21,11 +21,25 @@ function blogdata_fonts_url() {
 		
     $font_families = array();
  
-	$font_families = array('Inter:100,200,300,400,500,600,700,800,900&display=swap|Kalam:300,400,500,600,700,800,900&display=swap|Open Sans:300,400,500,600,700,800,900&display=swap|Rokkitt:300,400,500,600,700,800,900&display=swap|Jost:300,400,500,600,700,800,900&display=swap|Poppins:300,400,500,600,700,800,900&display=swap|Lato:300,400,500,600,700,800,900&display=swap|Noto Serif:300,400,500,600,700,800,900&display=swap|Raleway:300,400,500,600,700,800,900&display=swap|Roboto:300,400,500,600,700,800,900&display=swap');
- 
+        $font_families = array(
+            'DM Sans:300,400,500,600,700,800,900',
+            'Open Sans:300,400,500,600,700,800,900',
+            'Kalam:300,400,500,600,700,800,900',
+            'Rokkitt:300,400,500,600,700,800,900',
+            'Jost:300,400,500,600,700,800,900',
+            'Poppins:300,400,500,600,700',
+            'Lato:300,400,500,600,700,800,900',
+            'Noto Serif:300,400,500,600,700,800,900',
+            'Raleway:300,400,500,600,700,800,900',
+            'Roboto:300,400,500,600,700,800,900',
+            'Inter :100,200,300,400,500,600,700,800,900',
+        );
+
+        // Build the URL
         $query_args = array(
             'family' => urlencode( implode( '|', $font_families ) ),
-            'subset' => urlencode( 'latin,latin-ext' ),
+            'display' => 'swap',
+            'subset' => 'latin,latin-ext',
         );
  
     return apply_filters( 'blogdata_fonts_url', add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ) );
