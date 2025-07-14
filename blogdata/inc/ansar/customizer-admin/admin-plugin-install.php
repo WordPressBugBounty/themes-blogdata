@@ -35,21 +35,21 @@ function blogdata_deprecated_hook_admin_notice() {
                                 printf( esc_html__('Welcome to %1$s', 'blogdata'), esc_html( $theme_info->Name ), esc_html( $theme_info->Version ) ); ?>
                         </h1>
                         
-                        <p><?php esc_html_e("Thank you for choosing blogdata theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "blogdata");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "blogdata");?></a> <?php esc_html_e("plugin then use the demo importer and install the Blogdata Demo according to your need.", "blogdata"); ?></p>
+                        <p><?php esc_html_e("Thank you for choosing Blogdata theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "blogdata");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "blogdata");?></a> <?php esc_html_e("plugin then use the demo importer and install the Blogdata Demo according to your need.", "blogdata"); ?></p>
 
                         <div class="panel-column-6">
                             <div class="blogdata-notice-buttons">
-                                <a class="blogdata-btn-get-started button button-primary button-hero blogdata-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Starter Sites', 'blogdata' ) ?></a>
-                                <a class="blogdata-btn-get-started-customize button button-primary button-hero blogdata-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'blogdata' ) ?></a>
+                                <a class="blogdata-btn-get-started button button-primary button-hero blogdata-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Get Started', 'blogdata' ) ?></a>
+                                <a class="blogdata-btn-get-started-customize button button-secondary button-hero blogdata-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'blogdata' ) ?></a>
                             </div>
                             <div class="blogdata-notice-links">
-                                <div class="blogdata-documentation blogdata-notice-link">
-                                    <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
-                                    <a class="blogdata-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/blogdata-lite/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'blogdata' ) ?></a>
-                                </div>
                                 <div class="blogdata-demos blogdata-notice-link">
                                     <span aria-hidden="true" class="dashicons dashicons-images-alt"></span>
                                     <a class="blogdata-demos" href="<?php echo esc_url('https://demos.themeansar.com/blogdata-demos')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'blogdata' ) ?></a>
+                                </div>
+                                <div class="blogdata-documentation blogdata-notice-link">
+                                    <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
+                                    <a class="blogdata-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/blogdata-lite/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'blogdata' ) ?></a>
                                 </div>
                                 <div class="blogdata-support blogdata-notice-link">
                                     <span aria-hidden="true" class="dashicons dashicons-format-chat"></span>
