@@ -1,4 +1,5 @@
-<?php /**
+<?php 
+/**
  * AJAX handler to store the state of dismissible notices.
  */
 function blogdata_ajax_notice_handler() {
@@ -13,68 +14,80 @@ function blogdata_ajax_notice_handler() {
 add_action( 'wp_ajax_blogdata_dismissed_notice_handler', 'blogdata_ajax_notice_handler' );
 
 function blogdata_deprecated_hook_admin_notice() {
-        // Check if it's been dismissed...
-        if ( ! get_option('dismissed-get_started', FALSE ) ) {
-            // Added the class "notice-get-started-class" so jQuery pick it up and pass via AJAX,
-            // and added "data-notice" attribute in order to track multiple / different notices
-            // multiple dismissible notice states ?>
-               <div class="blogdata-notice-started updated notice notice-get-started-class is-dismissible" data-notice="get_started">
-                <div class="blogdata-notice clearfix">
-                    <div class="blogdata-notice-content">
-                        
-                        <div class="blogdata-notice_text">
-                        <div class="blogdata-hello">
-                            <?php esc_html_e( 'Hello, ', 'blogdata' ); 
-                            $current_user = wp_get_current_user();
-                            echo esc_html( $current_user->display_name );
-                            ?>
-                            <img draggable="false" role="img" class="emoji" alt="👋🏻" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f44b-1f3fb.svg">                
-                        </div>
-                        <h1><?php
-                                $theme_info = wp_get_theme();
-                                printf( esc_html__('Welcome to %1$s', 'blogdata'), esc_html( $theme_info->Name ), esc_html( $theme_info->Version ) ); ?>
-                        </h1>
-                        
-                        <p><?php esc_html_e("Thank you for choosing Blogdata theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "blogdata");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "blogdata");?></a> <?php esc_html_e("plugin then use the demo importer and install the Blogdata Demo according to your need.", "blogdata"); ?></p>
+    // Check if it's been dismissed...
+    if ( ! get_option('dismissed-get_started', FALSE ) ) {
+        // Added the class "notice-get-started-class" so jQuery pick it up and pass via AJAX,
+        // and added "data-notice" attribute in order to track multiple / different notices
+        // multiple dismissible notice states ?>
+            <div class="blogdata-notice-started updated notice notice-get-started-class is-dismissible" data-notice="get_started">
+            <div class="blogdata-notice clearfix">
+                <div class="blogdata-notice-content">
+                    
+                    <div class="blogdata-notice_text">
+                    <div class="blogdata-hello">
+                        <?php esc_html_e( 'Hello, ', 'blogdata' ); 
+                        $current_user = wp_get_current_user();
+                        echo esc_html( $current_user->display_name );
+                        ?>
+                        <img draggable="false" role="img" class="emoji" alt="👋🏻" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f44b-1f3fb.svg">                
+                    </div>
+                    <h1><?php
+                            $theme_info = wp_get_theme();
+                            printf( esc_html__('Welcome to %1$s', 'blogdata'), esc_html( $theme_info->Name ), esc_html( $theme_info->Version ) ); ?>
+                    </h1>
+                    
+                    <p>
+                    <?php
+                        echo wp_kses_post( sprintf(
+                            __(
+                                'Thank you for choosing %1$s theme. To take full advantage of the complete features of the theme, click Get Started and install and activate the %2$s plugin, then use the demo importer and install the %3$s demo according to your need.',
+                                'blogdata'
+                            ),
+                            esc_html($theme_info->Name),
+                            '<a href="https://wordpress.org/plugins/ansar-import" target="_blank">' . esc_html__('Ansar Import', 'blogdata') . '</a>',
+                            esc_html($theme_info->Name)
+                        ) );
+                        ?>
+                    </p>
 
-                        <div class="panel-column-6">
-                            <div class="blogdata-notice-buttons">
-                                <a class="blogdata-btn-get-started button button-primary button-hero blogdata-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Get Started', 'blogdata' ) ?></a>
-                                <a class="blogdata-btn-get-started-customize button button-secondary button-hero blogdata-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'blogdata' ) ?></a>
+                    <div class="panel-column-6">
+                        <div class="blogdata-notice-buttons">
+                            <a class="blogdata-btn-get-started button button-primary button-hero blogdata-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Get Started', 'blogdata' ) ?></a>
+                            <a class="blogdata-btn-get-started-customize button button-secondary button-hero blogdata-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'blogdata' ) ?></a>
+                        </div>
+                        <div class="blogdata-notice-links">
+                            <div class="blogdata-demos blogdata-notice-link">
+                                <span aria-hidden="true" class="dashicons dashicons-images-alt"></span>
+                                <a class="blogdata-demos" href="<?php echo esc_url('https://demos.themeansar.com/blogdata-demos')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'blogdata' ) ?></a>
                             </div>
-                            <div class="blogdata-notice-links">
-                                <div class="blogdata-demos blogdata-notice-link">
-                                    <span aria-hidden="true" class="dashicons dashicons-images-alt"></span>
-                                    <a class="blogdata-demos" href="<?php echo esc_url('https://demos.themeansar.com/blogdata-demos')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'blogdata' ) ?></a>
-                                </div>
-                                <div class="blogdata-documentation blogdata-notice-link">
-                                    <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
-                                    <a class="blogdata-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/blogdata-lite/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'blogdata' ) ?></a>
-                                </div>
-                                <div class="blogdata-support blogdata-notice-link">
-                                    <span aria-hidden="true" class="dashicons dashicons-format-chat"></span>
-                                    <a class="blogdata-support" href="<?php echo esc_url('https://themeansar.ticksy.com/')?>" data-name="" data-slug=""><?php esc_html_e( 'Support', 'blogdata' ) ?></a>
-                                </div>
-                                <div class="blogdata-videos blogdata-notice-link">
-                                    <span aria-hidden="true" class="dashicons dashicons-video-alt3"></span>
-                                    <a class="blogdata-videos" href="<?php echo esc_url('https://www.youtube.com/watch?v=pLlN5K7ESZw&list=PLWpTqYqS4j-wUPeadc_pjVIcxXPCBtD0q')?>" data-name="" data-slug=""><?php esc_html_e( 'Video Tutorials', 'blogdata' ) ?></a>
-                                </div>
+                            <div class="blogdata-documentation blogdata-notice-link">
+                                <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
+                                <a class="blogdata-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/blogdata-lite/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'blogdata' ) ?></a>
+                            </div>
+                            <div class="blogdata-support blogdata-notice-link">
+                                <span aria-hidden="true" class="dashicons dashicons-format-chat"></span>
+                                <a class="blogdata-support" href="<?php echo esc_url('https://themeansar.ticksy.com/')?>" data-name="" data-slug=""><?php esc_html_e( 'Support', 'blogdata' ) ?></a>
+                            </div>
+                            <div class="blogdata-videos blogdata-notice-link">
+                                <span aria-hidden="true" class="dashicons dashicons-video-alt3"></span>
+                                <a class="blogdata-videos" href="<?php echo esc_url('https://www.youtube.com/watch?v=pLlN5K7ESZw&list=PLWpTqYqS4j-wUPeadc_pjVIcxXPCBtD0q')?>" data-name="" data-slug=""><?php esc_html_e( 'Video Tutorials', 'blogdata' ) ?></a>
                             </div>
                         </div>
+                    </div>
 
-                        </div>
-                        <div class="blogdata-notice_image">
-                        <?php 
-                        $image_url = get_theme_file_uri( '/images/customize.webp' );
-                        // Check if the file exists
-                        if ( file_exists( get_theme_file_path( '/images/customize.webp' ) ) ) { ?>
-                            <img class="blogdata-screenshot" src="<?php echo esc_url( $image_url ); ?>" alt="<?php esc_attr_e( 'Blogdata', 'blogdata' ); ?>" />
-                        <?php } ?>
-                        </div>
+                    </div>
+                    <div class="blogdata-notice_image">
+                    <?php 
+                    $image_url = get_theme_file_uri( '/images/customize.webp' );
+                    // Check if the file exists
+                    if ( file_exists( get_theme_file_path( '/images/customize.webp' ) ) ) { ?>
+                        <img class="blogdata-screenshot" src="<?php echo esc_url( $image_url ); ?>" alt="<?php esc_attr_e( 'Blogdata', 'blogdata' ); ?>" />
+                    <?php } ?>
                     </div>
                 </div>
             </div>
-        <?php }
+        </div>
+    <?php }
 }
 
 add_action( 'admin_notices', 'blogdata_deprecated_hook_admin_notice' );
