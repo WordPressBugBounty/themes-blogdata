@@ -183,6 +183,8 @@ blockquote {
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
 }
 blockquote::before {
   content: "\f10d";
@@ -4196,10 +4198,10 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .d-grid.column4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .d-grid.column6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .navbar-wp {
     justify-content: end;
