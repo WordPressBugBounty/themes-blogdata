@@ -718,6 +718,12 @@ ol.wp-block-latest-comments li{
 .bs-sidebar .bs-widget ul.bs-social li a {
 	color: #fff;
 }
+.bs-sidebar .bs-widget.widget_blogdata-author-widget ul.bs-social li a i{
+	color: var(--head-color);
+}
+.bs-sidebar .bs-widget.widget_blogdata-author-widget ul.bs-social li a:hover i{
+	color: #a90e6d;
+}
 .bs-sidebar .bs-widget .bs-widget-tags a,
 .bs-sidebar .bs-widget .tagcloud a {
 	color: var(--cat-text-color);
@@ -788,7 +794,7 @@ ol.wp-block-latest-comments li{
 	color: var(--head-color);
 }
 .bs-sidebar .bs-widget.widget_blogdata-author-widget {
-	background-color: var(--bg-color2);
+	background-color: var(--border-color);
 }
 /*==================== general ====================*/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {

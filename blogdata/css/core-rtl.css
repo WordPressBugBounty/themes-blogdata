@@ -3275,6 +3275,7 @@ textarea {
   width: unset;
   height: unset;
   line-height: 1;
+  border-radius: 0;
 }
 .bs-sidebar .widget_categories ul li {
   display: flex;
