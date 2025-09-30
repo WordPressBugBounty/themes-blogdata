@@ -3178,6 +3178,9 @@ textarea {
   padding: 0;
   padding-right: 30px;
 }
+.content-right .d-grid.column2{
+  row-gap: 50px;
+}
 .bs-sidebar#sidebar-right {
   padding-left: 30px;
   padding-right: 0;
@@ -3278,8 +3281,8 @@ textarea {
   border-radius: 0;
 }
 .bs-sidebar .widget_categories ul li {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 .bs-sidebar .widget_search form .input-group {
   display: flex;
@@ -3334,19 +3337,19 @@ textarea {
   transition: all 0.2s;
 }
 .wp-block-latest-posts li, .wp-block-categories-list li, .wp-block-categories__list li, .wp-block-archives-list li,
-.bs-widget .wp-block-latest-posts li, .bs-widget .wp-block-categories-list li, .bs-widget .wp-block-categories__list li, .bs-widget .wp-block-archives-list li {
+.bs-widget .wp-block-latest-posts li, .bs-widget .wp-block-categories-list li, .bs-widget .wp-block-categories__list li, .bs-widget .wp-block-archives-list li, .widget_categories li {
   padding: 12px 0;
   border-bottom: 1px solid;
   display: flex;
 }
 .wp-block-latest-posts li a, .wp-block-categories-list li a, .wp-block-categories__list li a, .wp-block-archives-list li a,
-.bs-widget .wp-block-latest-posts li a, .bs-widget .wp-block-categories-list li a, .bs-widget .wp-block-categories__list li a, .bs-widget .wp-block-archives-list li a, .widget_nav_menu li a, .widget_meta li a {
+.bs-widget .wp-block-latest-posts li a, .bs-widget .wp-block-categories-list li a, .bs-widget .wp-block-categories__list li a, .bs-widget .wp-block-archives-list li a, .widget_nav_menu li a, .widget_meta li a, .widget_categories li a {
   flex: 1;
   font-weight: 600;
 }
 
 .wp-block-latest-posts li::before, .wp-block-categories-list li::before, .wp-block-categories__list li::before, .wp-block-archives-list li::before,
-.bs-widget .wp-block-latest-posts li::before, .bs-widget .wp-block-categories-list li::before, .bs-widget .wp-block-categories__list li::before, .bs-widget .wp-block-archives-list li::before, .widget_nav_menu li::before {
+.bs-widget .wp-block-latest-posts li::before, .bs-widget .wp-block-categories-list li::before, .bs-widget .wp-block-categories__list li::before, .bs-widget .wp-block-archives-list li::before, .widget_nav_menu li::before, .widget_categories li::before {
   content: "\f111";
   font-family: "Font Awesome 6 free";
   font-size: 5px;
@@ -4002,7 +4005,7 @@ footer.one .bs-footer-copyright .bs-social {
 footer.one .bs-footer-copyright .info-right {
   display: flex;
   justify-content: end;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 0;
   padding-left: 0;

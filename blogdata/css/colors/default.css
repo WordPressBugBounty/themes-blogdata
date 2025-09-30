@@ -748,7 +748,7 @@ ol.wp-block-latest-comments li{
 	background: var(--secondary-color);
 	border-color: var(--secondary-color);
 }
-.wp-block-latest-posts li a, .wp-block-categories-list li a, .wp-block-categories__list li a, .wp-block-archives-list li a, .bs-sidebar .bs-widget .wp-block-latest-posts li a, .bs-sidebar .bs-widget .wp-block-categories-list li a, .bs-sidebar .bs-widget .wp-block-categories__list li a, .bs-sidebar .bs-widget .wp-block-archives-list li a, .widget_nav_menu li a, .bs-sidebar .bs-widget.widget_nav_menu li a, .bs-sidebar .bs-widget.widget_meta li a{
+.wp-block-latest-posts li a, .wp-block-categories-list li a, .wp-block-categories__list li a, .wp-block-archives-list li a, .bs-sidebar .bs-widget .wp-block-latest-posts li a, .bs-sidebar .bs-widget .wp-block-categories-list li a, .bs-sidebar .bs-widget .wp-block-categories__list li a, .bs-sidebar .bs-widget .wp-block-archives-list li a, .widget_nav_menu li a, .bs-sidebar .bs-widget.widget_nav_menu li a, .bs-sidebar .bs-widget.widget_meta li a, .bs-widget.widget_categories ul li a{
 	color: var(--head-color);
 }
 .bs-widget .calendar_wrap table thead th,
