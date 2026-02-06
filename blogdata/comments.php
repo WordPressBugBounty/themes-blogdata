@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 									'blogdata'
 								)
 							),
-							esc_html (number_format_i18n( $comments_number ) ),
-							esc_html(get_the_title())
+							esc_html( number_format_i18n( $comments_number ) ),
+							esc_html( get_the_title() )
 						);
 					} 
 				?>

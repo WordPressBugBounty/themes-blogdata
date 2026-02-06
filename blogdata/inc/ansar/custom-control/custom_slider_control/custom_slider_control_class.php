@@ -38,11 +38,27 @@ class Blogdata_Customizer_Range_Control extends WP_Customize_Control {
 
 		// Main scripts.
 	
-		wp_enqueue_style('custom_slider_control_css1', get_template_directory_uri().'/inc/ansar/custom-control/custom_slider_control/css/custom_slider_control.css','4.0.13', 'all');
+		wp_enqueue_style(
+			'custom_slider_control_css1',
+			get_template_directory_uri() . '/inc/ansar/custom-control/custom_slider_control/css/custom_slider_control.css',
+			array(), // dependencies
+			BLOGDATA_THEME_VERSION,
+			'all'
+		);
 
-		wp_enqueue_script( 'custom_slider_control_js', get_template_directory_uri().'/inc/ansar/custom-control/custom_slider_control/js/custom_slider_control.js', array('jquery', 'customize-base',
-		'jquery-ui-button',
-		'jquery-ui-sortable',), false, true );
+		wp_enqueue_script(
+			'custom_slider_control_js',
+			get_template_directory_uri() . '/inc/ansar/custom-control/custom_slider_control/js/custom_slider_control.js',
+			array(
+				'jquery',
+				'customize-base',
+				'jquery-ui-button',
+				'jquery-ui-sortable',
+			),
+			BLOGDATA_THEME_VERSION,
+			true
+		);
+
 	}
 	
 	public function __construct( $manager, $id, $args = array() ) {

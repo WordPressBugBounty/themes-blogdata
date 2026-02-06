@@ -49,18 +49,26 @@ footer .bs-footer-copyright p, footer .bs-footer-copyright a {
   }
 </style>
 <?php
-$enable_blogdata_typo = get_theme_mod('enable_blogdata_typo', false);
-if ($enable_blogdata_typo == true) { ?>
-<style>
-/* Headings Typography*/
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .wp-block-search__label  {
-  font-weight:<?php echo blogdata_get_option('heading_fontweight'); ?> !important;
-  font-family:<?php echo blogdata_get_option('heading_fontfamily'); ?> !important;
 }
-/* Menus Font Family*/
-.navbar-wp .sm-clean > li > a, .navbar-wp .dropdown-menu > li > a{ 
-  font-family:<?php echo esc_attr(get_theme_mod('blogdata_menu_fontfamily','Inter'))?> !important; 
-}
-</style>
-<?php }
+
+function blogdata_customize_options() {
+
+  // Initialize string
+  $blogdata_custom_css = '';
+
+  if ( get_theme_mod('enable_blogdata_typo', false) == true) {
+    /* Headings Typography*/
+    $blogdata_custom_css .= 'h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .wp-block-search__label { 
+                              font-family:'. esc_attr(blogdata_get_option('heading_fontfamily')).' !important;
+                              font-weight:'. esc_attr(blogdata_get_option('heading_fontweight')).' !important;
+                            }';
+      /* Menus Font Family*/
+    $blogdata_custom_css .= '.navbar-wp .sm-clean > li > a, .navbar-wp .dropdown-menu > li > a { 
+                              font-family:'. esc_attr(get_theme_mod('blogdata_menu_fontfamily','Inter')).' !important; 
+                            }';
+  }
+  // Attach to the handle
+  if ( ! empty( $blogdata_custom_css ) ) {
+    wp_add_inline_style( 'blogdata-style', $blogdata_custom_css );
+  }
 }

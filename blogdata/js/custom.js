@@ -1,22 +1,22 @@
-(function($) {
+(function ($) {
   "use strict";
   /* =================================
   ===       slider        ====
   =================================== */
   function homefeatured() {
-  var recentareaSlider = new Swiper('.recentarea-slider', {
-    direction: 'vertical',
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 30,
-    autoplay: true,
-    // Navigation arrows
-    navigation: {
+    var recentareaSlider = new Swiper('.recentarea-slider', {
+      direction: 'vertical',
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      autoplay: true,
+      // Navigation arrows
+      navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
-    },
-    breakpoints: {
-    // when window width is <= 320px
+      },
+      breakpoints: {
+        // when window width is <= 320px
         768: {
           allowTouchMove: 0,
         },
@@ -24,24 +24,23 @@
     });
   }
   homefeatured();
-  
+
   function homemain() {
     var homemain = new Swiper('.homemain', {
       direction: 'horizontal',
       loop: true,
-      autoplay: true,
       autoplay: {
-        delay:3000,
+        delay: 3000,
       },
-      speed:500,
+      speed: 500,
       slidesPerView: 1,
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
-  
-    });              
+
+    });
   }
   homemain();
   /* =================================
@@ -51,9 +50,9 @@
     const postcrousel = new Swiper('.postcrousel', {
       direction: 'horizontal',
       loop: true,
-      autoplay:{
-        delay:$(".postcrousel").attr("storySpeed"),
-    },
+      autoplay: {
+        delay: $(".postcrousel").attr("storySpeed"),
+      },
       slidesPerView: 1,
       // Navigation arrows
       navigation: {
@@ -77,7 +76,7 @@
           spaceBetween: 30,
         },
       }
-    });              
+    });
   }
   postcrousel();
 
@@ -134,10 +133,10 @@
   /* =================================
   ===         STICKY HEADER       ====
   =================================== */
-  
+
   document.addEventListener('DOMContentLoaded', function () {
     let stickyHeader = document.querySelector(".bs-menu-full.sticky-header");
-    if(stickyHeader) {
+    if (stickyHeader) {
       let scrollDownElement = stickyHeader.offsetTop;
 
       window.addEventListener("scroll", function () {
@@ -150,7 +149,7 @@
       );
     }
   });
-  
+
   var elements = document.getElementsByClassName('bs-sticky');
 
   for (var i = 0; i < elements.length; i++) {
@@ -160,59 +159,58 @@
       bottomEnd: 0,
     });
   }
- 
-  jQuery('#load-more-btn').on('click', function() {
+
+  jQuery('#load-more-btn').on('click', function () {
     var $hiddenContents = $('.hide-content');
     var $btn = $(this);
-        // Check if there is hidden content to show
+    // Check if there is hidden content to show
     var loop_off = 0;
     if ($hiddenContents.length) {
       // Show the hidden content
-      $hiddenContents.each(function() {
-        if( loop_off < 5 ) {  $(this).removeClass('hide-content'); loop_off++; }   
+      $hiddenContents.each(function () {
+        if (loop_off < 5) { $(this).removeClass('hide-content'); loop_off++; }
       });
       // You can also remove the "Load More" button if there's no more hidden content
       if (loop_off < 5) {
-        console.log('removing button');
         $btn.parent().remove();
       }
-    }else{
+    } else {
       $btn.parent().remove();
     }
   });
-  jQuery(document).ready(function() {
+  jQuery(document).ready(function () {
     jQuery('.sm').smartmenus({
       subMenusSubOffsetX: 1,
       subMenusSubOffsetY: -8
     });
   });
-  
+
   /*---------------------------------------
     Off Canvas           
   -----------------------------------------*/
   let clickableAddElementRight = document.querySelector('[bs-data-clickable-end]');
   let clickableRemoveElement = document.querySelector('[bs-data-removable]');
   let clickableRemoveElementTwo = document.querySelector('[bs-remove-overlay]');
-  let targetElement = document.querySelector('[bs-data-targeted]'); 
-  let targetBody = document.querySelector('body'); 
+  let targetElement = document.querySelector('[bs-data-targeted]');
+  let targetBody = document.querySelector('body');
 
   // Function to handle the click event
-  function handleClickRight() { 
-    targetElement.classList.add('from-right'); 
-    clickableRemoveElementTwo.classList.add('show'); 
+  function handleClickRight() {
+    targetElement.classList.add('from-right');
+    clickableRemoveElementTwo.classList.add('show');
     targetBody.style.overflow = 'hidden';
     targetBody.style.paddingRight = '17px';
   }
   function handleClickRemove(event) {
     event.preventDefault();
     targetElement.classList.remove('from-right');
-    clickableRemoveElementTwo.classList.remove('show'); 
+    clickableRemoveElementTwo.classList.remove('show');
     targetBody.style.overflow = null;
     targetBody.style.paddingRight = null;
   }
 
   // Attach the handleClick function to the click event of the clickable element
-  if( (clickableAddElementRight !== null) && (clickableAddElementRight !== undefined)) {
+  if ((clickableAddElementRight !== null) && (clickableAddElementRight !== undefined)) {
     clickableAddElementRight.addEventListener('click', handleClickRight);
   }
   clickableRemoveElement.addEventListener('click', handleClickRemove);
@@ -222,33 +220,33 @@
     Search           
   -----------------------------------------*/
   let clickAddElementSearch = document.querySelector('[bs-search-clickable]');
-  let targetSerachElement = document.querySelector('[bs-search-targeted]'); 
-  let targetHideSerach = document.querySelector('[bs-dismiss-search]'); 
+  let targetSerachElement = document.querySelector('[bs-search-targeted]');
+  let targetHideSerach = document.querySelector('[bs-dismiss-search]');
 
   // Function to handle the click event
-  function openSearch(event) { 
+  function openSearch(event) {
     event.preventDefault();
     clickableRemoveElementTwo.classList.add('show');
     targetSerachElement.classList.add('show-search');
-    targetBody.style.overflow = 'hidden'; 
-    targetBody.style.paddingRight = '17px'; 
+    targetBody.style.overflow = 'hidden';
+    targetBody.style.paddingRight = '17px';
   }
   function hideSearch() {
-    clickableRemoveElementTwo.classList.remove('show'); 
+    clickableRemoveElementTwo.classList.remove('show');
     targetSerachElement.classList.remove('show-search');
     targetBody.style.overflow = null;
     targetBody.style.paddingRight = null;
   }
-  if(clickAddElementSearch){
+  if (clickAddElementSearch) {
     clickAddElementSearch.addEventListener('click', openSearch);
   }
   targetHideSerach.addEventListener('click', hideSearch);
 
-  $(document).ready(function(){
-    $(".menu-btn").click(function() {
-    $(this).toggleClass("on");
-    $("#main-nav").slideToggle();
-    $("#menu-header-menu").css("transition", "all 0.8s");
+  $(document).ready(function () {
+    $(".menu-btn").click(function () {
+      $(this).toggleClass("on");
+      $("#main-nav").slideToggle();
+      $("#menu-header-menu").css("transition", "all 0.8s");
     });
   });
 
@@ -294,8 +292,8 @@
 
   // Check window size on resize
   window.addEventListener('resize', checkWindowSize);
-  
-  document.addEventListener('DOMContentLoaded', function() {
+
+  document.addEventListener('DOMContentLoaded', function () {
     var pageTitle = document.querySelector('.bs-card-box.page-entry-title + .row .page-title');
     if (pageTitle) {
       pageTitle.remove();
@@ -304,15 +302,15 @@
 })(jQuery);
 
 
-(function(){
+(function () {
 
-  jQuery(document).ready(function() {
+  jQuery(document).ready(function () {
 
     /* ---------------------------------------------- /*
       * Scroll top
     /* ---------------------------------------------- */
 
-    jQuery(window).scroll(function() {
+    jQuery(window).scroll(function () {
       if (jQuery(this).scrollTop() > 100) {
         jQuery('.page-scroll-up').fadeIn();
       } else {
@@ -325,6 +323,6 @@
         scrollTop: 0
       }, 700);
       return false;
-    });       
+    });
   });
 })(jQuery);

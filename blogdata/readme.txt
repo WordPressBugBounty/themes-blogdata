@@ -2,10 +2,10 @@
 Contributors: Themeansar
 Author: Themeansar
 Requires at least: WordPress 6.7
-Tested up to: WordPress 6.8
+Tested up to: WordPress 6.9
 Requires PHP: 7.4
-Stable tag: 1.5.3
-Version: 1.5.3
+Stable tag: 1.7.0
+Version: 1.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -256,3 +256,54 @@ License: CC0 Public Domain
 
 = Version 1.5.3
 * Fixed Category Styling Issues.
+
+= Version 1.5.4
+* Fixed Styling Issues.
+
+= Version 1.5.5
+* Fixed Category Count Styling.
+
+= Version 1.5.6
+* Fixed Security Issues.
+
+= Version 1.5.7
+* Added Theme Support Function.
+
+= Version 1.5.8
+* Fixed Woocommerce Styling Issues.
+
+= Version 1.5.9
+* Added Woocommerce Category on Products.
+
+= Version 1.6.0
+* Fixed Product Meta Issue on Search Page
+
+= Version 1.6.1
+* Fixed WooCommerce Product Page Styling Issues.
+
+= Version 1.6.2
+* Added Navigation On Product Featured Image.
+
+= Version 1.6.3
+* Fixed WooCommerce Styling Issues.
+
+= Version 1.6.4
+* Fixed WooCommerce Product Price Color Issues.
+
+= Version 1.6.5
+* Fixed Shop Page Pagination Styling.
+
+= Version 1.6.6
+* Added Theme Color CSS Variable.
+
+= Version 1.6.7
+* Added Inlie Style Function.
+
+= Version 1.6.8
+* Fixed Code Issue.
+
+= Version 1.6.9
+* Fixed Translating Issue.
+
+= Version 1.7.0
+* Added Gradient Color Variable.

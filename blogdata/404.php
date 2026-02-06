@@ -19,10 +19,10 @@ get_header();?>
             <h1 class="title">
               <?php esc_html_e('4','blogdata'); ?><i class="fa-solid fa-face-sad-tear"></i><?php esc_html_e('4','blogdata'); ?>
             </h1>
-            <h4 class="subtitle"><?php echo esc_html(get_theme_mod('blogdata_404_title', 'Oops! Page not found')); ?></h4>
-            <p class="description"><?php echo esc_html(get_theme_mod('blogdata_404_desc','We are sorry, but the page you are looking for does not exist.')); ?></p>
-            <a href="<?php echo esc_url(home_url());?>" onClick="history.back();" class="btn btn-theme">
-              <?php echo esc_html(get_theme_mod('blogdata_404_btn_title','Go Back')); ?>
+            <h4 class="subtitle"><?php echo esc_html( get_theme_mod( 'blogdata_404_title', __( 'Oops! Page not found', 'blogdata' ) ) ); ?></h4>
+            <p class="description"><?php echo esc_html( get_theme_mod( 'blogdata_404_desc', __( 'We are sorry, but the page you are looking for does not exist.', 'blogdata' ) ) ); ?></p>
+            <a href="<?php echo esc_url( home_url() ); ?>" onClick="history.back();" class="btn btn-theme">
+              <?php echo esc_html( get_theme_mod( 'blogdata_404_btn_title', __( 'Go Back', 'blogdata' ) ) ); ?>
             </a>
           </div>
         <!--/mg-error-404--> 
