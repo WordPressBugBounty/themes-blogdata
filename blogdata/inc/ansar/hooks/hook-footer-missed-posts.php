@@ -34,10 +34,10 @@ if($you_missed_enable == 'true')
                 global $post;
                 $url = blogdata_get_freatured_image_url($post->ID, 'blogdata-featured'); ?>
                   <div class="bs-blog-post three md back-img bshre mb-0" <?php if(has_post_thumbnail()) { ?> style="background-image: url('<?php echo esc_url($url); ?>'); <?php } ?>">
+                  <div class="inner">
+                    <?php blogdata_post_categories(); ?>
+                    <h4 class="title md mb-0"> <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>"> <?php the_title(); ?></a> </h4> 
                     <a class="link-div" href="<?php the_permalink(); ?>"></a>
-                    <div class="inner">
-                      <?php blogdata_post_categories(); ?>
-                      <h4 class="title md mb-0"> <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>"> <?php the_title(); ?></a> </h4> 
                     </div>
                   </div>
               <?php endwhile; endif; wp_reset_postdata(); ?> 

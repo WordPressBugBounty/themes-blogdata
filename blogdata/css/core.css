@@ -3221,6 +3221,10 @@ header.bs-default {
   row-gap: 2rem;
 }
 
+.bs-related-post-info .link-div{
+  z-index: 1;
+}
+
 /* Fix Categories  */
 .bs-related-post-info .bs-blog-post.three .bs-blog-category>*:not(:where(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4))) {
   display: none;
@@ -4790,6 +4794,10 @@ textarea {
 .missed .wd-back .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 18px;
   border-radius: 8px;
+}
+
+.missed .link-div {
+  z-index: 1;
 }
 
 footer.one .bs-footer-widget-area {

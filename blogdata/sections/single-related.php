@@ -31,23 +31,23 @@ $enable_admin = blogdata_get_option('blogdata_enable_single_related_admin');
                 global $post;
                 $url = blogdata_get_freatured_image_url($post->ID, 'blogdata-featured'); ?>
                 <div class="bs-blog-post three md back-img bshre mb-lg-0" <?php if(has_post_thumbnail()) { ?> style="background-image: url('<?php echo esc_url($url); ?>');" <?php } ?>>
-                    <a class="link-div" href="<?php the_permalink(); ?>"></a>
-                    <div class="inner">
-                        <?php if($enable_category == true) { ?>
-                            <?php blogdata_post_categories(); ?> 
-                        <?php } ?>
-                        <h4 class="title md"> 
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>">
-                                <?php the_title(); ?>
-                            </a>
-                        </h4> 
-                        <div class="bs-blog-meta">
-                            <?php if($enable_admin == true){ 
-                                    blogdata_author_content(); 
-                                } if($enable_date == true) {
-                                    blogdata_date_content(); 
+                <div class="inner">
+                    <?php if($enable_category == true) { ?>
+                    <?php blogdata_post_categories(); ?> 
+                    <?php } ?>
+                    <h4 class="title md"> 
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h4> 
+                    <div class="bs-blog-meta">
+                        <?php if($enable_admin == true){ 
+                            blogdata_author_content(); 
+                            } if($enable_date == true) {
+                                blogdata_date_content(); 
                                 } ?>
                         </div>
+                        <a class="link-div" href="<?php the_permalink(); ?>"></a>
                     </div>
                 </div> 
             <?php }
