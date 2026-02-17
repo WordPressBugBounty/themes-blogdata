@@ -2655,7 +2655,7 @@ header.bs-default {
 }
 
 .bs-blog-post .title {
-  font-size: 27px;
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 20px;
@@ -5220,10 +5220,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     font-size: 28px;
   }
 
-  .bs-blog-post .title {
-    font-size: 25px;
-  }
-
   .multi-post-widget .bs-blog-post.three.bsm.post-1 .title {
     font-size: 20px;
   }
@@ -5256,6 +5252,9 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
   .bs .swiper-button-prev,
   .bs .swiper-button-next {
     display: none;
+  }
+  .bs-blog-category a{
+    padding: 6px 15px;
   }
 }
 
@@ -5308,8 +5307,8 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
   }
 
   .container {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .search-popup .search-inner .search-form {
