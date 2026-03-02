@@ -89,6 +89,10 @@
 .customizer-repeater-box-content-hidden .wp-picker-container {
     margin-bottom: 1em !important;
 }
+.customizer-repeater-box-content-hidden input[type='checkbox'] {
+    margin-bottom: 0em !important;
+    margin-left: 4px;
+}
 
 .social-repeater-general-control-remove-field {
     cursor: pointer;

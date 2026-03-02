@@ -4069,7 +4069,7 @@ textarea {
 
 .bs-sidebar .bs-widget .wp-block-latest-posts li,
 .wp-block-latest-posts__list.wp-block-latest-posts li {
-  display: block;
+  display: flex;
 }
 
 .bs-widget .wp-block-latest-posts li:has(.wp-block-latest-posts__featured-image)::before,
@@ -4765,7 +4765,7 @@ textarea {
 }
 
 .missed .bs-widget-title {
-  padding: 0 calc(var(--bs-gutter-x) * 0.5);
+  /* padding: 0 calc(var(--bs-gutter-x) * 0.5); */
 }
 
 .missed .inner {

@@ -4067,6 +4067,10 @@ textarea {
 .bs-sidebar .bs-widget.widget_nav_menu li {
   display: block;
 }
+.bs-sidebar .bs-widget .wp-block-latest-posts li,
+.wp-block-latest-posts__list.wp-block-latest-posts li {
+  display: flex;
+}
 
 .widget_nav_menu li::before {
   content: '\';
