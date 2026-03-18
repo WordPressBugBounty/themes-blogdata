@@ -749,7 +749,7 @@ ol, ul {
 }
 .rtl .comment-metadata .edit-link{
     padding-right: 0;
-    padding-left: 3rem;
+    padding-left: 3.5rem;
 }
 .rtl .comment-body .reply {
     right: auto;

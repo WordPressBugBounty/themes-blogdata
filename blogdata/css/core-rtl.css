@@ -3267,7 +3267,9 @@ header.bs-default {
 .rtl .comment-list {
   padding: 0;
 }
-
+.rtl .comment-metadata .edit-link{
+  padding-left: 3.5rem;
+}
 .comments-area.bs-card-box,
 .comments-area.bs-card-box p {
   font-size: 1rem;
@@ -3279,7 +3281,7 @@ header.bs-default {
   margin-bottom: 1.5rem;
   border: 1px solid rgba(225, 225, 225, 0.9);
   position: relative;
-  padding: 2rem 8.5rem 2.5rem 2.5rem;
+  padding: 2rem 8.5rem 2rem 2rem;
   min-height: 10rem;
   overflow-wrap: break-word;
   word-wrap: break-word;

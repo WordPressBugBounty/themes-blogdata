@@ -3309,6 +3309,7 @@ header.bs-default {
 
 .comment-body .reply {
   text-align: end;
+  right: 2.5rem;
 }
 
 #comments img {
