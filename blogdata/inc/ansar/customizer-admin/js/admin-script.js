@@ -1,6 +1,6 @@
 (function ($) {
   $(document).ready(function () {
-    $('.blogdata-btn-get-started').on('click', function (e) {
+    $('.blogdata-btn-get-started.load').on('click', function (e) {
       e.preventDefault();
       if (!blogdata_ajax_object.can_install) {
         alert('Sorry, you are not allowed to access this page.');
