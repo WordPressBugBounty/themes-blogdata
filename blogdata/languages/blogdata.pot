@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Blogdata\n"
-"POT-Creation-Date: 2024-05-02 17:09+0530\n"
-"PO-Revision-Date: 2024-05-02 17:07+0530\n"
+"Project-Id-Version: BlogData\n"
+"POT-Creation-Date: 2026-05-02 13:50+0530\n"
+"PO-Revision-Date: 2026-05-02 13:49+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,20 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:17
+#: 404.php:20
 msgid "4"
+msgstr ""
+
+#: 404.php:22 inc/ansar/customize/theme-options.php:161
+msgid "Oops! Page not found"
+msgstr ""
+
+#: 404.php:23 inc/ansar/customize/theme-options.php:173
+msgid "We are sorry, but the page you are looking for does not exist."
+msgstr ""
+
+#: 404.php:25 inc/ansar/customize/theme-options.php:185
+msgid "Go Back"
 msgstr ""
 
 #. translators: %s: post title
@@ -60,121 +72,129 @@ msgstr ""
 msgid "%1$s by %2$s."
 msgstr ""
 
-#: functions.php:101
+#: functions.php:99
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:100
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:224
-msgid "Menu Sidebar Widget Area"
+#: functions.php:214 inc/ansar/hooks/hook-side-menu-section.php:24
+msgid "Header Toggle Sidebar"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:224
 msgid "Sidebar Widget Area"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:234
 msgid "Footer Widget Area"
 msgstr ""
 
-#: header.php:34
+#: header.php:29
 msgid "Skip to content"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:287
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:294
 msgid "Browse:"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:288
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:295
 msgctxt "breadcrumbs aria label"
 msgid "Breadcrumbs"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:289 index-banner.php:16
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:296 index-banner.php:16
 #: index-banner.php:21
 msgid "Home"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:290
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:297
 msgid "404 Not Found"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:291
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:298
 msgid "Archives"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:293
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:300
 #, php-format
 msgid "Search results for: %s"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:295
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:302
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:297
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:304
 #, php-format
 msgid "Comment Page %s"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:299
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:306
 #, php-format
 msgid "Minute %s"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:301
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:308
 #, php-format
 msgid "Week %s"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:753
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:760
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:770
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:777
 msgctxt "minute archives time format"
 msgid "i"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:787
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:794
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:803
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:832
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:859
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:886
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:1221
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:810
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:839
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:866
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:893
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:1228
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:804
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:860
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:1227
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:811
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:867
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:1234
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:805
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:1232
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:812
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:1239
 msgctxt "daily archives date format"
 msgid "j"
 msgstr ""
 
-#: inc/ansar/breadcrumb-trail/breadcrumbs.php:833
+#: inc/ansar/breadcrumb-trail/breadcrumbs.php:840
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr ""
 
-#: inc/ansar/custom-navwalker-class.php:207
-msgid "Add a menu"
+#: inc/ansar/custom-control/custom_tab_control/custom_tab_control_class.php:38
+msgid "General"
+msgstr ""
+
+#: inc/ansar/custom-control/custom_tab_control/custom_tab_control_class.php:40
+msgid "Style"
+msgstr ""
+
+#: inc/ansar/custom-control/custom_tab_control/custom_tab_control_class.php:42
+msgid "Sharing Social Icon"
 msgstr ""
 
 #: inc/ansar/custom-control/customize_layout.php:28
@@ -185,12 +205,16 @@ msgstr ""
 msgid "Disable"
 msgstr ""
 
+#: inc/ansar/custom-navwalker-class.php:207
+msgid "Add a menu"
+msgstr ""
+
 #: inc/ansar/customize-pro/class-customize.php:64
-msgid "UPGRADE TO PRO VERSION"
+msgid "UPGRADE TO PRO"
 msgstr ""
 
 #: inc/ansar/customize-pro/class-customize.php:75
-msgid "NEED HELP! CONTACT US"
+msgid "Get Support"
 msgstr ""
 
 #: inc/ansar/customize/customize-core.php:14
@@ -200,7 +224,7 @@ msgstr ""
 #: inc/ansar/customize/customize-core.php:24
 #: inc/ansar/customize/customize-core.php:35
 #: inc/ansar/customize/footer-options.php:253
-#: inc/ansar/customize/header-options.php:382
+#: inc/ansar/customize/header-options.php:136
 msgid "Background Color"
 msgstr ""
 
@@ -208,24 +232,32 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: inc/ansar/customize/customizer-default.php:73
+#: inc/ansar/customize/customizer-control.php:207
+msgid "Unlock More Features Available in The Pro Version"
+msgstr ""
+
+#: inc/ansar/customize/customizer-control.php:209
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/ansar/customize/customizer-default.php:66
 #: inc/ansar/customize/footer-options.php:31
 #: inc/ansar/customize/footer-options.php:41
 msgid "You Missed"
 msgstr ""
 
-#: inc/ansar/customize/customizer-default.php:78
+#: inc/ansar/customize/customizer-default.php:71
 msgid "Copyright &copy; All rights reserved"
 msgstr ""
 
 #: inc/ansar/customize/footer-options.php:51
-msgid "Enable You Missed Section"
+msgid "Enable/Disable Missed Section"
 msgstr ""
 
 #: inc/ansar/customize/footer-options.php:62
-#: inc/ansar/customize/header-options.php:248
-#: inc/ansar/customize/theme-options.php:151
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:358
+#: inc/ansar/customize/header-options.php:341
+#: inc/ansar/customize/theme-options.php:160
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:359
 #: inc/ansar/widgets/widget-author-info.php:107
 #: inc/ansar/widgets/widget-recent-post.php:70
 msgid "Title"
@@ -244,7 +276,7 @@ msgid "Width"
 msgstr ""
 
 #: inc/ansar/customize/footer-options.php:123
-#: inc/ansar/customize/header-options.php:399
+#: inc/ansar/customize/header-options.php:152
 msgid "Height"
 msgstr ""
 
@@ -274,192 +306,180 @@ msgid "Copyright"
 msgstr ""
 
 #: inc/ansar/customize/footer-options.php:231
-msgid "Enable Copyright Section"
+msgid "Enable/Disable Copyright Text"
 msgstr ""
 
 #: inc/ansar/customize/footer-options.php:242
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:20
-#: inc/ansar/customize/frontpage-options.php:30
+#: inc/ansar/customize/frontpage-options.php:13
+#: inc/ansar/customize/frontpage-options.php:75
 msgid "Featured Slider"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:42
-msgid "Enable Slider Banner Section"
+#: inc/ansar/customize/frontpage-options.php:84
+msgid "Enable/Disable Banner"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:53
+#: inc/ansar/customize/frontpage-options.php:95
 msgid "Slider Position"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:57
+#: inc/ansar/customize/frontpage-options.php:99
 msgid "Left"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:58
+#: inc/ansar/customize/frontpage-options.php:100
 msgid "Right"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:69
+#: inc/ansar/customize/frontpage-options.php:111
 msgid "Background image"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:70
-#: inc/ansar/customize/header-options.php:132
+#: inc/ansar/customize/frontpage-options.php:122
+#: inc/ansar/customize/frontpage-options.php:147
+#: inc/ansar/customize/frontpage-options.php:173
+#: inc/ansar/widgets/widgets-common-functions.php:24
+msgid "Select Category"
+msgstr ""
+
+#: inc/ansar/customize/frontpage-options.php:123
+#: inc/ansar/customize/frontpage-options.php:148
+#: inc/ansar/customize/frontpage-options.php:174
+msgid "Posts to be shown on banner slider section"
+msgstr ""
+
+#: inc/ansar/customize/frontpage-options.php:136
+msgid "Trending Post Section"
+msgstr ""
+
+#: inc/ansar/customize/frontpage-options.php:162
+msgid "Editor Post Section"
+msgstr ""
+
+#: inc/ansar/customize/frontpage-options.php:188
+#: inc/ansar/customize/frontpage-options.php:243
+msgid "Title Font Size"
+msgstr ""
+
+#: inc/ansar/customize/frontpage-options.php:220
+msgid "Hide/Show Meta"
+msgstr ""
+
+#: inc/ansar/customize/frontpage-options.php:232
+msgid "Trending/Editor Post Section"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:14
+msgid "Site Identity"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:23
+msgid "Logo & Site Icon"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:32
+msgid "Logo Width"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:62
+msgid "Site Title & Tagline"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:69
+msgid "Display site title"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:76
+msgid "Site Title Size"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:106
+msgid "Header Option"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:116
+msgid "Header Image"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:126
+msgid "Remove Overlay Color"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:183
+#: inc/ansar/customize/header-options.php:193
+msgid "Banner Advertisement"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:194
 #, php-format
 msgid "Recommended Size %1$s px X %2$s px"
 msgstr ""
 
-#: inc/ansar/customize/frontpage-options.php:85
-msgid "Slider Section"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:96
-#: inc/ansar/customize/frontpage-options.php:121
-#: inc/ansar/customize/frontpage-options.php:147
-msgid "Select Category To Show"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:97
-#: inc/ansar/customize/frontpage-options.php:122
-#: inc/ansar/customize/frontpage-options.php:148
-msgid "Posts to be shown on banner slider section"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:110
-msgid "Trending Post Section"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:136
-msgid "Editor Post Section"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:161
-msgid "Style"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:174
-#: inc/ansar/customize/frontpage-options.php:229
-msgid "Title Font Size"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:206
-msgid "Hide / Show Meta"
-msgstr ""
-
-#: inc/ansar/customize/frontpage-options.php:218
-msgid "Trending/Editor Post Section"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:20
-msgid "Site Identity"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:29
-msgid "Logo & Site Icon"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:38
-msgid "Logo Width"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:68
-msgid "Site Title & Tagline"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:75
-msgid "Display site title"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:82
-msgid "Site Title Size"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:112
-msgid "Header Option"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:121
-#: inc/ansar/customize/header-options.php:131
-msgid "Banner Advertisement"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:147
-#: inc/ansar/customize/header-options.php:260
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:282
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:383
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:488
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:510
+#: inc/ansar/customize/header-options.php:209
+#: inc/ansar/customize/header-options.php:354
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:283
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:384
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:489
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:511
 msgid "Link"
 msgstr ""
 
-#: inc/ansar/customize/header-options.php:159
-#: inc/ansar/customize/header-options.php:272
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:440
+#: inc/ansar/customize/header-options.php:221
+#: inc/ansar/customize/header-options.php:366
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:441
 #: inc/ansar/widgets/widget-author-info.php:173
-msgid "Open link in new tab"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:171
-#: inc/ansar/customize/header-options.php:180
-msgid "Header Rightbar"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:189
-msgid "Hide / Show Search"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:199
-msgid "Hide / Show Dark and Lite Mode Switcher"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:210
-#: inc/ansar/customize/header-options.php:250
-msgid "Subscribe"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:222
-msgid "Hide / Show Subscribe"
+msgid "Open link in a new tab"
 msgstr ""
 
 #: inc/ansar/customize/header-options.php:233
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:451
-msgid "Icon"
+#: inc/ansar/customize/header-options.php:242
+msgid "Menu"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:252
+msgid "Enable/Disable Toggle Icon"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:262
+msgid "Enable/Disable Search Icon"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:272
+msgid "Enable/Disable Dark/Light Icon"
 msgstr ""
 
 #: inc/ansar/customize/header-options.php:284
-msgid "Menu Sidebar"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:296
-msgid "Hide/Show Menu Sidebar"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:308
 msgid "Shopping Cart"
 msgstr ""
 
-#: inc/ansar/customize/header-options.php:320
+#: inc/ansar/customize/header-options.php:293
 msgid "Hide/Show Cart"
 msgstr ""
 
-#: inc/ansar/customize/header-options.php:332
-#: inc/ansar/customize/header-options.php:341
+#: inc/ansar/customize/header-options.php:306
+#: inc/ansar/customize/header-options.php:343
+msgid "Subscribe"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:315
+msgid "Hide/Show"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:326
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:452
+msgid "Icon"
+msgstr ""
+
+#: inc/ansar/customize/header-options.php:377
+#: inc/ansar/customize/header-options.php:386
 msgid "Sticky Header"
 msgstr ""
 
-#: inc/ansar/customize/header-options.php:350
-msgid "On/Off"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:360
-msgid "Header Image"
-msgstr ""
-
-#: inc/ansar/customize/header-options.php:371
-msgid "Remove Overlay Color"
+#: inc/ansar/customize/header-options.php:395
+msgid "Enable/Disable Sticky Header"
 msgstr ""
 
 #: inc/ansar/customize/theme-layout.php:14
@@ -475,321 +495,373 @@ msgid "Archive Pages"
 msgstr ""
 
 #: inc/ansar/customize/theme-layout.php:42
-msgid "Sidebar Width(%)"
+msgid "Sidebar Width"
 msgstr ""
 
-#: inc/ansar/customize/theme-layout.php:73
-#: inc/ansar/customize/theme-layout.php:83
-msgid "Blog"
+#: inc/ansar/customize/theme-layout.php:72
+#: inc/ansar/customize/theme-options.php:317
+msgid "Single Page"
 msgstr ""
 
-#: inc/ansar/customize/theme-layout.php:106
-msgid "Single"
-msgstr ""
-
-#: inc/ansar/customize/theme-layout.php:115
-msgid "Single Blog Pages"
-msgstr ""
-
-#: inc/ansar/customize/theme-layout.php:138
-#: inc/ansar/customize/theme-layout.php:147
+#: inc/ansar/customize/theme-layout.php:96
 msgid "Pages"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:23
-msgid "Theme Option"
+#: inc/ansar/customize/theme-layout.php:120
+#: inc/ansar/customize/theme-layout.php:129
+msgid "Blog"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:32
+#: inc/ansar/customize/theme-options.php:22
+msgid "Theme Options"
+msgstr ""
+
+#: inc/ansar/customize/theme-options.php:31
 msgid "Breadcrumb"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:43
-msgid "Hide / Show Breadcrumb"
+#: inc/ansar/customize/theme-options.php:42
+msgid "Hide/Show Breadcrumb"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:54
-msgid "Menu Sidebar Position"
+#: inc/ansar/customize/theme-options.php:53
+msgid "Breadcrumb Type"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:57
+#: inc/ansar/customize/theme-options.php:56
 msgid ""
 "If you use other than \"default\" one you will need to install and activate "
 "respective plugins Breadcrumb NavXT, Yoast SEO and Rank Math SEO"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:59
+#: inc/ansar/customize/theme-options.php:58
 msgid "Default"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:60
+#: inc/ansar/customize/theme-options.php:59
 msgid "NavXT"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:61
+#: inc/ansar/customize/theme-options.php:60
 msgid "Yoast SEO"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:62
+#: inc/ansar/customize/theme-options.php:61
 msgid "Rank Math"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:71
+#: inc/ansar/customize/theme-options.php:70
 msgid "Social Icon"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:81
+#: inc/ansar/customize/theme-options.php:80
 msgid "Enable Footer Social Icon"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:101
+#: inc/ansar/customize/theme-options.php:100
 msgid "Social Icons"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:104
+#: inc/ansar/customize/theme-options.php:103
 msgid "Add New Social"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:105
+#: inc/ansar/customize/theme-options.php:104
 msgid "Social"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:116
+#: inc/ansar/customize/theme-options.php:125
 msgid "Post Image"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:127
+#: inc/ansar/customize/theme-options.php:136
 msgid "Post Image display type:"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:131
+#: inc/ansar/customize/theme-options.php:140
 msgid "Fix Height Post Image"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:132
+#: inc/ansar/customize/theme-options.php:141
 msgid "Auto Height Post Image"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:141
+#: inc/ansar/customize/theme-options.php:150
 msgid "404 Page"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:152
-msgid "Oops! Page not found"
-msgstr ""
-
-#: inc/ansar/customize/theme-options.php:162
+#: inc/ansar/customize/theme-options.php:172
 #: inc/ansar/widgets/widget-author-info.php:127
 msgid "Description"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:163
-msgid "We are sorry, but the page you are looking for does not exist."
-msgstr ""
-
-#: inc/ansar/customize/theme-options.php:173
+#: inc/ansar/customize/theme-options.php:184
 msgid "Button Title"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:174
-msgid "Go Back"
-msgstr ""
-
-#: inc/ansar/customize/theme-options.php:183
+#: inc/ansar/customize/theme-options.php:195
 msgid "Blog Page"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:193
-msgid "blog Post"
-msgstr ""
-
-#: inc/ansar/customize/theme-options.php:203
-msgid "Drop Caps (First Big Letter)"
+#: inc/ansar/customize/theme-options.php:205
+msgid "Blog Post"
 msgstr ""
 
 #: inc/ansar/customize/theme-options.php:215
-#: inc/ansar/customize/theme-options.php:327
+msgid "Drop Caps (First Big Letter)"
+msgstr ""
+
+#: inc/ansar/customize/theme-options.php:227
+#: inc/ansar/customize/theme-options.php:336
 msgid "Category"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:226
-#: inc/ansar/customize/theme-options.php:236
-#: inc/ansar/customize/theme-options.php:338
-#: inc/ansar/customize/theme-options.php:371
+#: inc/ansar/customize/theme-options.php:238
+#: inc/ansar/customize/theme-options.php:248
+#: inc/ansar/customize/theme-options.php:347
+#: inc/ansar/customize/theme-options.php:380
 msgid "Post Meta"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:251
-#: inc/ansar/customize/theme-options.php:388
-#: inc/ansar/customize/theme-options.php:401
+#: inc/ansar/customize/theme-options.php:263
+#: inc/ansar/customize/theme-options.php:397
+#: inc/ansar/customize/theme-options.php:410
 msgid "Author"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:252
-#: inc/ansar/customize/theme-options.php:389
+#: inc/ansar/customize/theme-options.php:264
+#: inc/ansar/customize/theme-options.php:398
 msgid "Date"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:253
-#: inc/ansar/customize/theme-options.php:390 inc/ansar/template-tags.php:116
+#: inc/ansar/customize/theme-options.php:265
+#: inc/ansar/customize/theme-options.php:399 inc/ansar/template-tags.php:121
 msgid "Comments"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:262
+#: inc/ansar/customize/theme-options.php:274
 msgid "Choose Content Option"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:270
-#: inc/ansar/customize/theme-options.php:273
+#: inc/ansar/customize/theme-options.php:285
 msgid "Excerpt"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:274
+#: inc/ansar/customize/theme-options.php:286
 msgid "Full Content"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:283
+#: inc/ansar/customize/theme-options.php:295
 msgid "Pagination"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:297
+#: inc/ansar/customize/theme-options.php:306
 msgid "Next-Prev"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:298
+#: inc/ansar/customize/theme-options.php:307
 msgid "Numbers"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:308
-msgid "Single Page"
-msgstr ""
-
-#: inc/ansar/customize/theme-options.php:317
+#: inc/ansar/customize/theme-options.php:326
 msgid "Single Post"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:349
+#: inc/ansar/customize/theme-options.php:358
 msgid "Featured Image"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:360
+#: inc/ansar/customize/theme-options.php:369
 msgid "Hide/Show Sharing Icons"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:391
+#: inc/ansar/customize/theme-options.php:400
 msgid "Tags"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:409
-msgid "Hide / Show Author"
+#: inc/ansar/customize/theme-options.php:418
+msgid "Hide/Show Author"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:420
-#: inc/ansar/customize/theme-options.php:443 sections/single-related.php:10
+#: inc/ansar/customize/theme-options.php:429 sections/single-related.php:10
 msgid "Related Post"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:431
-msgid "Hide / Show Related Posts"
+#: inc/ansar/customize/theme-options.php:437
+msgid "Hide/Show Related Post"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:442
+#: inc/ansar/customize/theme-options.php:448
 msgid "Related Post Title"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:453
+#: inc/ansar/customize/theme-options.php:449
+msgid "Related Posts"
+msgstr ""
+
+#: inc/ansar/customize/theme-options.php:460
 msgid "Hide/Show Categories"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:464
+#: inc/ansar/customize/theme-options.php:471
 msgid "Hide/Show Author Details"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:475
+#: inc/ansar/customize/theme-options.php:482
 msgid "Hide/Show Date"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:485
+#: inc/ansar/customize/theme-options.php:492
 msgid "Post Comments"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:494
+#: inc/ansar/customize/theme-options.php:501
 msgid "Hide/Show Comments"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:505
+#: inc/ansar/customize/theme-options.php:512
 msgid "Sticky Sidebar"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:515
-msgid "On / Off"
+#: inc/ansar/customize/theme-options.php:522
+#: inc/ansar/customize/theme-options.php:716
+msgid "On/Off"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:525
+#: inc/ansar/customize/theme-options.php:532
 msgid "Theme Colors"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:534
-msgid "Category Colors"
+#: inc/ansar/customize/theme-options.php:541
+msgid "Category Color"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:558
-msgid "Site Title/Tagline Color"
-msgstr ""
-
-#: inc/ansar/customize/theme-options.php:567
+#: inc/ansar/customize/theme-options.php:565
+#: inc/ansar/customize/theme-options.php:574
 msgid "Site Title/Tagline"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:577
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:350
+#: inc/ansar/customize/theme-options.php:584
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:351
 msgid "Color"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:588
+#: inc/ansar/customize/theme-options.php:595
 msgid "Hover Color"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:598
-msgid "Color (Dark Mode)"
+#: inc/ansar/customize/theme-options.php:605
+msgid "Color (Dark Layout)"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:608
-msgid "Hover Color (Dark Mode)"
+#: inc/ansar/customize/theme-options.php:615
+msgid "Hover Color (Dark Layout)"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:618
-#: inc/ansar/customize/theme-options.php:628
+#: inc/ansar/customize/theme-options.php:625
+#: inc/ansar/customize/theme-options.php:635
 msgid "Theme Mode"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:651
+#: inc/ansar/customize/theme-options.php:658
 msgid "Scroller"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:660
-msgid "Scroll to top"
+#: inc/ansar/customize/theme-options.php:667
+msgid "Scroll To Top"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:669
-msgid "Hide / Show Scroll to Top"
+#: inc/ansar/customize/theme-options.php:676
+msgid "Enable/Disable Scroll To Top"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:700
+#: inc/ansar/customize/theme-options.php:707
 msgid "Typography"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:710
-#: inc/ansar/customize/theme-options.php:743
+#: inc/ansar/customize/theme-options.php:726
+msgid "Heading"
+msgstr ""
+
+#: inc/ansar/customize/theme-options.php:735
+#: inc/ansar/customize/theme-options.php:768
 msgid "Font Family"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:721
+#: inc/ansar/customize/theme-options.php:746
 msgid "Font Weight"
 msgstr ""
 
-#: inc/ansar/customize/theme-options.php:734
+#: inc/ansar/customize/theme-options.php:759
 msgid "Menu Font"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:30
+#, php-format
+msgid "Hello, %s"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:36
+#, php-format
+msgid "Welcome to %1$s"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:43
+#, php-format
+msgid ""
+"Thank you for choosing %1$s theme. To take full advantage of the complete "
+"features of the theme, click Get Started and install and activate the %2$s "
+"plugin, then use the demo importer and install the %3$s demo according to "
+"your need."
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:47
+msgid "Ansar Import"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:56
+#: inc/ansar/customizer-admin/admin-plugin-install.php:58
+msgid "Get Started"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:60
+msgid "Customize Site"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:65
+msgid "View Demos"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:69
+msgid "View Documentation"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:73
+msgid "Support"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:77
+msgid "Video Tutorials"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:88
+msgid "Blogdata"
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:107
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:127
+msgid "Failed to fetch plugin information."
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:134
+msgid "Plugin installation failed."
+msgstr ""
+
+#: inc/ansar/customizer-admin/admin-plugin-install.php:140
+msgid "Plugin installed and activated successfully."
 msgstr ""
 
 #: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:33
@@ -800,64 +872,84 @@ msgstr ""
 msgid "Customizer Repeater"
 msgstr ""
 
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:320
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:403
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:321
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:404
 msgid "Delete field"
 msgstr ""
 
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:456
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:457
 #, php-format
 msgid ""
 "Note: Some icons may not be displayed here. You can see the full list of "
 "icons at %1$s."
 msgstr ""
 
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:474
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:475
 msgid "Social icons"
 msgstr ""
 
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:491
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:521
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:492
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:522
 msgid "Remove Icon"
 msgstr ""
 
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:496
-#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:529
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:497
+#: inc/ansar/customizer-repeater/class/customizer-repeater-control.php:530
 msgid "Add Icon"
 msgstr ""
 
-#: inc/ansar/hooks/hook-meta.php:23
-msgid "Layout Options"
+#: inc/ansar/hooks/hook-side-menu-section.php:27
+msgid ""
+"This is an example widget to show how the Header Toggle Sidebar looks by "
+"default. You can add custom widgets from the"
 msgstr ""
 
-#: inc/ansar/hooks/hook-meta.php:71
-msgid "Set as global layout"
+#: inc/ansar/hooks/hook-side-menu-section.php:28
+#: inc/ansar/hooks/hook-side-menu-section.php:29
+msgid "widgets"
 msgstr ""
 
-#: inc/ansar/hooks/hook-meta.php:74
-msgid "Content - Primary Sidebar"
+#: inc/ansar/hooks/hook-side-menu-section.php:31
+msgid "in the admin."
 msgstr ""
 
-#: inc/ansar/hooks/hook-meta.php:77
-msgid "Primary Sidebar - Content"
-msgstr ""
-
-#: inc/ansar/hooks/hook-meta.php:80
-msgid "Full width content"
-msgstr ""
-
-#: inc/ansar/hooks/hook-single-page.php:9
+#: inc/ansar/hooks/hook-single-page.php:9 sections/single-author.php:5
 msgid "By"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/ansar/template-functions.php:337
+#: inc/ansar/template-functions.php:285
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/ansar/template-tags.php:237
+#: inc/ansar/template-tags.php:118
+msgid "No Comments"
+msgstr ""
+
+#: inc/ansar/template-tags.php:121
+msgid "Comment"
+msgstr ""
+
+#. translators: %s: search term
+#: inc/ansar/template-tags.php:287
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/ansar/template-tags.php:326
 msgid "Read More"
+msgstr ""
+
+#: inc/ansar/template-tags.php:461
+#, php-format
+msgid "%s result found"
+msgid_plural "%s results found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/ansar/template-tags.php:465
+msgid "No results found"
 msgstr ""
 
 #: inc/ansar/widgets/widget-author-info.php:17
@@ -928,57 +1020,55 @@ msgstr ""
 msgid "Enable feature image"
 msgstr ""
 
-#: inc/ansar/widgets/widgets-base.php:196
+#: inc/ansar/widgets/widgets-base.php:195
 msgid "Upload"
 msgstr ""
 
-#: inc/ansar/widgets/widgets-base.php:197
+#: inc/ansar/widgets/widgets-base.php:196
 msgid "Select Image"
 msgstr ""
 
-#: inc/ansar/widgets/widgets-base.php:198
+#: inc/ansar/widgets/widgets-base.php:197
 msgid "Choose Image"
 msgstr ""
 
-#: inc/ansar/widgets/widgets-base.php:209
+#: inc/ansar/widgets/widgets-base.php:208
 msgctxt "Remove"
 msgid "X"
 msgstr ""
 
-#: inc/ansar/widgets/widgets-common-functions.php:24
-msgid "Select Category"
-msgstr ""
-
-#. translators: %s: search term
-#: search.php:19
-#, php-format
-msgid "Search Results for: %s"
-msgstr ""
-
-#: search.php:34
+#: sections/content-search.php:29
 msgid "Nothing Found"
 msgstr ""
 
-#: search.php:37
+#: sections/content-search.php:32
 msgid ""
 "Sorry, but nothing matched your search criteria. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: sections/page-data.php:33
+#: sections/page-data.php:37
 msgid "Pages:"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Blogdata"
+msgid "BlogData"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://themeansar.com/free-themes/blogdata-free-wordpress-theme/"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Blogdata WordPress theme ideal for a business or blog website (corporate, "
-"Consulting, Advisor, Agency, Finance, law, Photography etc.). You can also "
-"use for anything. It comes with all features these kind of shop page, blog "
-"page.The theme you can use for any business website."
+"BlogData is a fast, clean, modern-looking Best Responsive News Magazine "
+"WordPress theme. The theme is fully widgetized, so users can manage the "
+"content by using easy to use widgets. BlogData is suitable for dynamic news, "
+"newspapers, magazine, publishers, blogs, editors, online and gaming "
+"magazines, newsportals,personal blogs, newspaper, publishing or review "
+"siteand any creative website. BlogData is SEO friendly, WPML,Gutenberg, "
+"translation and RTL ready. Live preview : https://demos.themeansar.com/"
+"blogdata and documentation at https://docs.themeansar.com/docs/blogdata/"
 msgstr ""
 
 #. Author of the plugin/theme
