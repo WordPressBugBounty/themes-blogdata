@@ -504,3 +504,10 @@ li#accordion-section-blogdata_pro_upsell h3{
     line-height: 1.2;
     color: inherit !important;
 }
+/* admin notice media query */
+@media(max-width: 767px){  
+  .blogdata-notice-started .blogdata-notice-content{
+    flex-direction: column;
+    gap: 30px;
+  }
+}
