@@ -200,7 +200,7 @@
   border: 1px solid #2271b1;
 }
 #customize-controls .ui-checkboxradio-checked img {
-  border: 3px solid #005aff;
+  border: 3px solid var(--wp-admin-theme-color);
 }
 #customize-control-blogdata_skin_mode img{
   border: none;

@@ -146,8 +146,8 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 	transition: color .5s; 
 	cursor: pointer; 
 }
-.customize-control .responsive-switchers li button:hover { color: #2271b1; }
-.customize-control .responsive-switchers li button.active { color: #2271b1; }
+.customize-control .responsive-switchers li button:hover { color: var(--wp-admin-theme-color);; }
+.customize-control .responsive-switchers li button.active { color: var(--wp-admin-theme-color);; }
 .customize-control .responsive-switchers li button i { 
 	width: auto; 
 	height: auto; 
