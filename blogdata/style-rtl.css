@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/blogdata-free-wordpress-theme/
 Author: Themeansar
 Author URI: http://themeansar.com
 Description: BlogData is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. BlogData is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. BlogData is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demos.themeansar.com/blogdata and documentation at https://docs.themeansar.com/docs/blogdata/
-Version: 1.8.4
+Version: 1.8.5
 Tested up to: 7.0
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -31,7 +31,6 @@ Text Domain: blogdata
     z-index: 500;
     left: 5%;
 }
-
 .blogdata-customizer-target-btn {
     position: absolute;
     left: -30px;
@@ -60,36 +59,29 @@ Text Domain: blogdata
     animation-name: customize-partial-edit-shortcut-bounce-appear;
     pointer-events: auto;
 }
-
 .blogdata-customizer-target-btn:hover {
     background: #4f94d4 !important;
 }
-
 .header-ads .blogdata-customizer-edit-icon {
     left: 18%;
     top: -14%;
 }
-
 .collapse.navbar-collapse .blogdata-customizer-edit-icon {
     left: 3.5%;
     top: 7%;
 }
-
 .back-img .blogdata-customizer-edit-icon[type_id="blogdata_footer_widget_background"] {
     top: 0%;
     left: 2.5%;
 }
-
 #main-nav .blogdata-customizer-edit-icon {
     z-index: 99999;
 }
-
 span.customize-partial-edit-shortcut.customize-partial-edit-shortcut-blogdata_archive_page_layout,
 span.customize-partial-edit-shortcut.customize-partial-edit-shortcut-blogdata_single_page_layout,
 span.customize-partial-edit-shortcut.customize-partial-edit-shortcut-blogdata_page_layout {
     width: 1px !important;
 }
-
 /* comments */
 .comment-body .fn a {
     display: inline-block;

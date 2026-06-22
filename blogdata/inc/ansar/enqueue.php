@@ -1,4 +1,5 @@
-<?php function blogdata_scripts() {
+<?php 
+function blogdata_scripts() {
 
 	wp_enqueue_style('all-css',get_template_directory_uri().'/css/all.css');
 

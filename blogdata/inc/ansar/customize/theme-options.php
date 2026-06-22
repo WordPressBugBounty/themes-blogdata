@@ -773,31 +773,6 @@ Blogdata_Customizer_Control::add_field(
 	)
 );
 
-// if ( ! function_exists( 'blogdata_sanitize_select' ) ) :
-//     /**
-//      * Sanitize select.
-//      *
-//      * @since 1.0.0
-//      *
-//      * @param mixed                $input The value to sanitize.
-//      * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
-//      * @return mixed Sanitized value.
-//      */
-//     function blogdata_sanitize_select( $input, $setting ) {
-
-//         // Ensure input is a slug.
-//         $input = sanitize_key( $input );
-
-//         // Get list of choices from the control associated with the setting.
-//         $choices = $setting->manager->get_control( $setting->id )->choices;
-
-//         // If the input is a valid key, return it; otherwise, return the default.
-//         return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-
-//     }
-
-// endif;
-
 function blogdata_template_page_sanitize_text( $input ) {
 
     return wp_kses_post( force_balance_tags( $input ) );

@@ -274,22 +274,6 @@ class Blogdata_Customizer_Range_Control extends WP_Customize_Control {
 }
 
 /**
- * Sanitize values for range inputs.
- *
- * @param string $input Control input.
- */
-function blogdata_sanitize_range_value( $input ) {
-	if ( blogdata_is_json( $input ) ) {
-		$range_value            = json_decode( $input, true );
-		$range_value['desktop'] = ! empty( $range_value['desktop'] ) || $range_value['desktop'] === '0' ? floatval( $range_value['desktop'] ) : '';
-		$range_value['tablet']  = ! empty( $range_value['tablet'] ) || $range_value['tablet'] === '0' ? floatval( $range_value['tablet'] ) : '';
-		$range_value['mobile']  = ! empty( $range_value['mobile'] ) || $range_value['mobile'] === '0' ? floatval( $range_value['mobile'] ) : '';
-		return json_encode( $range_value );
-	}
-	return floatval( $input );
-}
-
-/**
  * Check if a string is in json format
  *
  * @param  string $string Input.

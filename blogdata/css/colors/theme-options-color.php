@@ -67,6 +67,17 @@ function blogdata_customize_options() {
                               font-family:'. esc_attr(get_theme_mod('blogdata_menu_fontfamily','Inter')).' !important; 
                             }';
   }
+		
+  $blogdata_custom_css   .= blogdata_customizer_value( 'site_title_font_size', '.site-branding-text .site-title a', array( 'font-size' ), array( 40, 35, 30 ), 'px' );
+  $blogdata_custom_css   .= blogdata_customizer_value( 'side_main_logo_width', '.bs-menu-full .navbar-brand img', array( 'width' ), array( 250, 200, 150 ), 'px' );
+  
+  $blogdata_custom_css   .= blogdata_customizer_value( 'header_image_height', '.header-image-section .overlay', array( 'height' ), array( 200, 150, 130 ), 'px' );
+  
+  $blogdata_custom_css   .= blogdata_customizer_value( 'blogdata_slider_title_font_size', '.bs-slide .inner .title', array( 'font-size' ), array( 38, 32, 24 ), 'px !important' );
+  $blogdata_custom_css   .= blogdata_customizer_value( 'blogdata_tren_edit_title_font_size', '.multi-post-widget .bs-blog-post.three.bsm .title', array( 'font-size' ), array( 22, 20, 16 ), 'px !important' );
+  $blogdata_custom_css   .= blogdata_customizer_value( 'blogdata_footer_main_logo_width', 'footer .bs-footer-bottom-area .custom-logo, footer .bs-footer-copyright .custom-logo', array( 'width' ), array( 210, 170, 130 ), 'px' );
+  $blogdata_custom_css   .= blogdata_customizer_value( 'blogdata_footer_main_logo_height', 'footer .bs-footer-bottom-area .custom-logo, footer .bs-footer-copyright .custom-logo', array( 'height' ), array( 70, 50, 40 ), 'px' );
+    
   // Attach to the handle
   if ( ! empty( $blogdata_custom_css ) ) {
     wp_add_inline_style( 'blogdata-style', $blogdata_custom_css );
