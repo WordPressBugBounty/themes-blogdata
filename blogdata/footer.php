@@ -40,11 +40,9 @@
                         <div class="row align-center">
                             <div class="col-lg-6 col-md-6">
                                 <div class="footer-logo text-xs">
-                                    <?php the_custom_logo(); ?>
-                                    <div class="site-branding-text">
-                                        <p class="site-title-footer"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-                                        <p class="site-description-footer"><?php bloginfo('description'); ?></p>
-                                    </div>
+                                    <?php the_custom_logo(); 
+                                        do_action('blogdata_action_footer_site_title_tagline');
+                                    ?>
                                 </div>
                             </div>
                             <!--col-lg-3-->
@@ -69,7 +67,7 @@
                                             <span class="sep"> | </span>
                                             <?php  printf(esc_html__('%1$s by %2$s.', 'blogdata'), '<a href="https://themeansar.com/free-themes/blogdata/" target="_blank">BlogData</a>', '<a href="https://themeansar.com" target="_blank">Themeansar</a>'); ?>
                                             </a>
-                                            </p>
+                                        </p>
                                     <?php } ?>                                       
                                 </div>
                                 <?php if( has_nav_menu( 'footer') ) { ?>

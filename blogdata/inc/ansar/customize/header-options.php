@@ -66,7 +66,7 @@ Blogdata_Customizer_Control::add_section(
 
 $wp_customize->get_control( 'blogname' )->section = 'blogdata_site_title_section';
 $wp_customize->get_control( 'display_header_text' )->section = 'blogdata_site_title_section';
-$wp_customize->get_control( 'display_header_text' )->label = esc_html__( 'Display site title', 'blogdata' );
+$wp_customize->get_control( 'display_header_text' )->label = esc_html__( 'Display Site Title', 'blogdata' );
 $wp_customize->get_control( 'blogdescription' )->section = 'blogdata_site_title_section';
 
 Blogdata_Customizer_Control::add_field( 
@@ -98,6 +98,18 @@ Blogdata_Customizer_Control::add_field(
             ),
         ),
     ),
+);
+Blogdata_Customizer_Control::add_field( 
+    array(
+        'type'              => 'checkbox', 
+        'settings'          => 'display_header_tagline',
+        'label'             => esc_html__('Display Tagline', 'blogdata'),
+        'section'           => 'blogdata_site_title_section',
+        'transport'         => 'postMessage',
+        'priority'          => 100,
+        'default'           => false,
+        'sanitize_callback' => 'blogdata_sanitize_checkbox',
+    )
 );
 // Theme Header Panel 
 Blogdata_Customizer_Control::add_panel(

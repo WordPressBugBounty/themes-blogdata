@@ -753,6 +753,7 @@ header.bs-default {
   justify-content: space-between;
   flex-wrap: wrap;
   flex: 1;
+  position: relative;
 }
 .bs-head-detail {
   padding: 0.5rem 0;
