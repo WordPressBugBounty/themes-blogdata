@@ -188,7 +188,7 @@
   /*---------------------------------------
     Off Canvas           
   -----------------------------------------*/
-  let clickableAddElementRight = document.querySelector('[bs-data-clickable-end]');
+  let clickableAddElementRight = document.querySelectorAll('[bs-data-clickable-end]');
   let clickableRemoveElement = document.querySelector('[bs-data-removable]');
   let clickableRemoveElementTwo = document.querySelector('[bs-remove-overlay]');
   let targetElement = document.querySelector('[bs-data-targeted]');
@@ -196,51 +196,149 @@
 
   // Function to handle the click event
   function handleClickRight() {
-    targetElement.classList.add('from-right');
-    clickableRemoveElementTwo.classList.add('show');
+    targetElement.classList.add('from-right'); 
+    clickableRemoveElementTwo.classList.add('show'); 
     targetBody.style.overflow = 'hidden';
     targetBody.style.paddingRight = '17px';
+    if (clickableRemoveElement) {
+      clickableRemoveElement.focus();
+    }
   }
+  
   function handleClickRemove(event) {
     event.preventDefault();
     targetElement.classList.remove('from-right');
-    clickableRemoveElementTwo.classList.remove('show');
+    clickableRemoveElementTwo.classList.remove('show'); 
     targetBody.style.overflow = null;
     targetBody.style.paddingRight = null;
+    if (clickableAddElementRight.length > 0) {
+      clickableAddElementRight[0].focus();
+    }
   }
 
   // Attach the handleClick function to the click event of the clickable element
-  if ((clickableAddElementRight !== null) && (clickableAddElementRight !== undefined)) {
-    clickableAddElementRight.addEventListener('click', handleClickRight);
+  if( (clickableAddElementRight !== null) && (clickableAddElementRight !== undefined)) {
+    clickableAddElementRight.forEach(function(element) {
+      element.addEventListener('click', handleClickRight);
+    });
   }
-  clickableRemoveElement.addEventListener('click', handleClickRemove);
-  clickableRemoveElementTwo.addEventListener('click', handleClickRemove);
+
+  // Safety checks for the removal elements
+  if (clickableRemoveElement) {
+    clickableRemoveElement.addEventListener('click', handleClickRemove);
+  }
+  if (clickableRemoveElementTwo) {
+    clickableRemoveElementTwo.addEventListener('click', handleClickRemove);
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && targetElement.classList.contains('from-right')) {
+      handleClickRemove(e);
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+
+    if (e.key === 'Tab' && targetElement.classList.contains('from-right')) {
+
+      const firstElement = document.querySelector('[bs-data-removable]');
+      const lastElement = document.querySelector('.empty-sidebar-widget-text a');
+      // const lastElement = document.querySelector('[bs-data-last]');
+
+      if (!firstElement || !lastElement) return;
+
+      if (document.activeElement === lastElement && !e.shiftKey) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+
+      if (document.activeElement === firstElement && e.shiftKey) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+    }
+  });
+
 
   /*---------------------------------------
     Search           
   -----------------------------------------*/
-  let clickAddElementSearch = document.querySelector('[bs-search-clickable]');
-  let targetSerachElement = document.querySelector('[bs-search-targeted]');
-  let targetHideSerach = document.querySelector('[bs-dismiss-search]');
-
+  let clickAddElementSearch = document.querySelectorAll('[bs-search-clickable]');
+  let targetSearchElement = document.querySelector('[bs-search-targeted]');
+  let targetHideSearch = document.querySelector('[bs-dismiss-search]');
+ 
   // Function to handle the click event
   function openSearch(event) {
     event.preventDefault();
+
     clickableRemoveElementTwo.classList.add('show');
-    targetSerachElement.classList.add('show-search');
+    targetSearchElement.classList.add('show-search');
     targetBody.style.overflow = 'hidden';
     targetBody.style.paddingRight = '17px';
+
+    setTimeout(function () {
+      const closeBtn = targetSearchElement.querySelector('[bs-dismiss-search]');
+
+      if (closeBtn) {
+        closeBtn.setAttribute('tabindex', '0');
+        closeBtn.focus();
+
+        // console.log(document.activeElement === closeBtn);
+        // console.log(document.activeElement);
+      }
+    }, 350);
   }
   function hideSearch() {
-    clickableRemoveElementTwo.classList.remove('show');
-    targetSerachElement.classList.remove('show-search');
+    clickableRemoveElementTwo.classList.remove('show'); 
+    targetSearchElement.classList.remove('show-search');
     targetBody.style.overflow = null;
     targetBody.style.paddingRight = null;
+    if (clickAddElementSearch.length > 0) {
+      clickAddElementSearch[0].focus();
+    }
   }
-  if (clickAddElementSearch) {
-    clickAddElementSearch.addEventListener('click', openSearch);
+  if(clickAddElementSearch){
+    clickAddElementSearch.forEach(function(element) {
+      element.addEventListener('click', openSearch);
+    });
   }
-  targetHideSerach.addEventListener('click', hideSearch);
+  // clickableRemoveElementTwo.addEventListener('click', hideSearch);
+  if (targetHideSearch) {
+    targetHideSearch.addEventListener('click', hideSearch);
+  }
+  clickAddElementSearch.forEach(function(element) {
+    element.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        openSearch(e);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && targetSearchElement.classList.contains('show-search')) {
+      hideSearch();
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+
+    if (e.key !== 'Tab') return;
+    if (!targetSearchElement.classList.contains('show-search')) return;
+
+    const firstElement = targetSearchElement.querySelector('[bs-dismiss-search]');
+    const lastElement = targetSearchElement.querySelector('.search-popup-content .search-form .search-submit');
+
+    if (!firstElement || !lastElement) return;
+
+    if (document.activeElement === lastElement && !e.shiftKey) {
+      e.preventDefault();
+      firstElement.focus();
+    }
+    if (document.activeElement === firstElement && e.shiftKey) {
+      e.preventDefault();
+      lastElement.focus();
+    }
+
+  });
 
   $(document).ready(function () {
     $(".menu-btn").click(function () {
