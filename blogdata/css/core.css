@@ -8,19 +8,16 @@
   --bstras: 0 4px 60px 0px rgba(0 0 0 / 20%);
   --fontWeight: 700;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   width: 100%;
   margin: 0;
@@ -38,7 +35,6 @@ body {
   padding: 0;
   overflow: hidden;
 }
-
 /*------------------------------- 
  	-Input 
 ------------------------*/
@@ -72,12 +68,10 @@ select {
   transition: all 0.8s;
   margin-bottom: 20px;
 }
-
 input[type=radio],
 input[type=checkbox] {
   display: inline;
 }
-
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=url]:focus,
@@ -129,7 +123,6 @@ select:focus {
   grid-column-gap: 2rem;
   padding: 0;
 }
-
 input,
 button,
 select,
@@ -140,7 +133,6 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-
 /*---------------------------------------
 	Typography        
 -----------------------------------------*/
@@ -148,32 +140,26 @@ h1,
 .h1 {
   font-size: 2.5rem;
 }
-
 h2,
 .h2 {
   font-size: 2rem;
 }
-
 h3,
 .h3 {
   font-size: 1.75rem;
 }
-
 h4,
 .h4 {
   font-size: 1.5rem;
 }
-
 h5,
 .h5 {
   font-size: 1.25rem;
 }
-
 h6,
 .h6 {
   font-size: 1rem;
 }
-
 h1,
 .h1,
 h2,
@@ -208,7 +194,6 @@ h6,
 .aligncenter {
   text-align: center;
 }
-
 blockquote {
   position: relative;
   width: 100%;
@@ -219,7 +204,6 @@ blockquote {
   border-radius: 10px;
   margin-bottom: 32px;
 }
-
 blockquote::before {
   content: "\f10d";
   display: table;
@@ -230,7 +214,6 @@ blockquote::before {
   font-weight: 900;
   width: 6%;
 }
-
 blockquote p {
   font-style: italic;
   width: 94%;
@@ -250,7 +233,6 @@ blockquote p {
 .show {
   display: block;
 }
-
 a:focus,
 button:focus {
   outline: 1px dotted var(--pri-color);
@@ -263,32 +245,27 @@ button:focus {
   margin-left: auto;
   max-width: 576px;
 }
-
 @media (min-width: 768px) {
   .container {
     max-width: 992px;
   }
 }
-
 @media (min-width: 992px) {
   .container {
     max-width: 1200px;
   }
 }
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1648px;
   }
 }
-
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .container {
     padding-right: 3rem;
     padding-left: 3rem;
   }
 }
-
 @media (min-width: 1200px) and (max-width: 1659.98px) {
   .container {
     padding-right: 3rem;
@@ -324,7 +301,6 @@ button:focus {
   flex: 0 0 auto;
   width: auto;
 }
-
 input[type=submit], button, .btn, .more-link {
   padding: 10px 35px;
   line-height: 30px;
@@ -367,7 +343,6 @@ input[type=submit], button, .btn, .more-link {
   margin-left: auto;
   margin-right: auto;
 }
-
 img {
   max-width: 100%;
   display: block;
@@ -420,7 +395,6 @@ img {
 .d-none {
   display: none !important;
 }
-
 a,
 button {
   transition: all 0.5s;
@@ -432,7 +406,6 @@ button {
 .w-100 {
   width: 100%;
 }
-
 ul {
   list-style: none;
   padding: 0;
@@ -499,7 +472,6 @@ ul {
 .gap-1 {
   gap: 1.5rem;
 }
-
 p {
   margin: 0 0 15px 0;
   font-size: 16px;
@@ -528,15 +500,12 @@ p {
   background-position: center;
   background-repeat: no-repeat;
 }
-
 figure {
   margin: 0 0 1rem;
 }
-
 html {
   font-size: 100%;
 }
-
 /*
   ##Device = Most of the screen
   ##Screen = 1200px and under.
@@ -546,7 +515,6 @@ html {
     font-size: 95%;
   }
 }
-
 /* 
   ##Device = Most of the tablets
   ##Screen = 991px and under.
@@ -556,7 +524,6 @@ html {
     font-size: 90%;
   }
 }
-
 /* 
   ##Device = Most of the tablets
   ##Screen = 767px and under.
@@ -566,7 +533,6 @@ html {
     font-size: 85%;
   }
 }
-
 /* 
   ##Device = Most of the smartphones (portrait)
   ##Screen = 575px and under.
@@ -576,14 +542,12 @@ html {
     font-size: 80%;
   }
 }
-
 /* Search Page */
 .search-results-count {
   margin-bottom: 0;
   font-size: 17px;
   margin-top: 5px;
 }
-
 /*---------------------------------------
 	Gradient Scroll Bar 
 -----------------------------------------*/
@@ -591,13 +555,11 @@ html {
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   border-radius: 100vh;
   background: #1f2937;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
@@ -622,7 +584,6 @@ html {
   grid-gap: 1.5rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-
 /*---------------------------------------
 	social Links
 -----------------------------------------*/
@@ -656,7 +617,6 @@ html {
 .bs-social li a i:hover {
   transition: all 0.8s;
 }
-
 /*---------------------------------------
 	swipper controls         
 -----------------------------------------*/
@@ -693,7 +653,6 @@ html {
   width: 18px;
   height: 8px;
 }
-
 /*--section--*/
 .btn-0 i {
   width: 26px;
@@ -705,13 +664,11 @@ html {
   text-align: center;
   margin-left: 10px;
 }
-
 /* home four swiper control */
 .widgets-new.tpn .swiper-button-next,
 .widgets-new.tpn .swiper-button-prev {
   position: absolute;
 }
-
 /*---------------------------------------
 	bs-section
 -----------------------------------------*/
@@ -754,12 +711,10 @@ html {
 .menu-btn:focus {
   outline: 1px dotted var(--pri-color);
 }
-
 /**** Header Image *****/
 .header-image-section .overlay {
   height: 200px;
 }
-
 /**** Header CSS *****/
 .site-branding-text .site-title {
   font-size: 40px;
@@ -778,7 +733,6 @@ html {
 .site-title-footer {
   line-height: 1.4;
 }
-
 header.bs-default {
   z-index: 5;
   border-bottom-width: 1px;
@@ -789,7 +743,6 @@ header.bs-default {
   justify-content: space-between;
   flex-wrap: wrap;
   flex: 1;
-  position: relative;
 }
 .bs-head-detail {
   padding: 0.5rem 0;
@@ -816,7 +769,6 @@ header.bs-default {
   line-height: 1.1;
   word-break: break-word;
 }
-
 /*-----middle---*/
 .bs-menu-full {
   box-shadow: unset;
@@ -852,19 +804,16 @@ header.bs-default {
   left: 0;
   box-shadow: var(--bxsh);
 }
-
 @keyframes slide-down {
   0% {
     opacity: 1;
     transform: translateY(-100%);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 /*-----bottom---*/
 .navbar-wp nav {
   display: flex;
@@ -951,7 +900,6 @@ header.bs-default {
   line-height: 1;
   gap: 6px;
 }
-
 /*---------------------------------------
 	Humbarger Styles           
 -----------------------------------------*/
@@ -989,7 +937,6 @@ header.bs-default {
   transform: rotate(-45deg);
   transform-origin: 10% 90%;
 }
-
 /*---------------------------------------
 	light/dark switch Styles           
 -----------------------------------------*/
@@ -1049,14 +996,12 @@ header.bs-default {
   align-items: center;
   text-align: center;
 }
-
 /*---------------------------------------
 	-header-2
 -----------------------------------------*/
 .bs-headtwo {
   position: relative;
 }
-
 /*---------------------------------------
 	-header-3
 -----------------------------------------*/
@@ -1071,7 +1016,6 @@ header.bs-default {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-
 /*---------------------------------------
 	-header-4
 -----------------------------------------*/
@@ -1085,7 +1029,6 @@ header.bs-default {
   justify-content: center;
   flex-direction: column;
 }
-
 /*---------------------------------------
 	-header-5
 -----------------------------------------*/
@@ -1108,7 +1051,6 @@ header.bs-default {
 .bs-headfive .bs-menu-full .navbar-wp nav ul.sm-clean li a .sub-arrow {
   right: 6px;
 }
-
 /*---------------------------------------
 	Header six 
 -----------------------------------------*/
@@ -1118,7 +1060,6 @@ header.bs-default {
 .bs-headsix .inner div .pull-right img {
   display: inline-block;
 }
-
 /*---------------------------------------
 	Menu Description
 -----------------------------------------*/
@@ -1150,7 +1091,6 @@ header.bs-default {
   left: 3px;
   bottom: -4px;
 }
-
 /*---------------------------------------
 	-breadcrumb
 -----------------------------------------*/
@@ -1199,7 +1139,6 @@ header.bs-default {
   font-size: 16px;
   line-height: 2;
 }
-
 /*---------------------------------------
 	pagination
 -----------------------------------------*/
@@ -1361,7 +1300,6 @@ header.bs-default {
 .bs-newslatter .text-input .sub-link i {
   padding-right: 10px;
 }
-
 /*Responsive Video*/
 .responsive-video {
   height: 0;
@@ -1386,7 +1324,6 @@ header.bs-default {
   margin-bottom: 50px;
   border-radius: var(--bxbra);
 }
-
 /*---------------------------------------
 	404 Page 
 -----------------------------------------*/
@@ -1399,7 +1336,6 @@ header.bs-default {
 .bs-error-404 .title i {
   margin: 0 5px;
 }
-
 /*---------------------------------------
   Off Canvas Styles           
 -----------------------------------------*/
@@ -1493,7 +1429,6 @@ header.bs-default {
 .bs-offcanvas.from-right+.bs-offcanvas-overlay {
   visibility: visible;
 }
-
 /*---------------------------------------
 	Search        
 -----------------------------------------*/
@@ -1579,7 +1514,6 @@ header.bs-default {
   font-weight: 700;
   margin-bottom: 5px;
 }
-
 /* Button Style */
 .btn-one,
 .btn-two {
@@ -1710,36 +1644,29 @@ header.bs-default {
   animation: cursorAnim3 0.5s forwards;
   border: 1px solid var(-pri-color);
 }
-
 @keyframes cursorAnim {
   from {
     transform: scale(1);
   }
-
   to {
     transform: scale(0.7);
   }
 }
-
 @keyframes cursorAnim2 {
   from {
     transform: scale(1);
   }
-
   to {
     transform: scale(0.4);
   }
 }
-
 @keyframes cursorAnim3 {
   0% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(3);
   }
-
   100% {
     transform: scale(1);
     opacity: 0;
@@ -1783,7 +1710,6 @@ header.bs-default {
 .row[title="Shift-click to edit this element."] span.customize-partial-edit-shortcut.customize-partial-edit-shortcut-blogdata_page_layout {
   width: 1px !important;
 }
-
 /* ------------blog-right-sidebar------------*/
 #content {
   padding: 40px 0;
@@ -1791,7 +1717,6 @@ header.bs-default {
 .bs-section.blog .bs-heading .bs-title {
   margin-bottom: 3rem;
 }
-
 /*---------------------------------------
 	blogs       
 -----------------------------------------*/
@@ -1819,7 +1744,6 @@ header.bs-default {
 .bs-blog-post .circle_btn:hover {
   transform: rotate(90deg);
 }
-
 #content>.d-grid {
   row-gap: 64px;
 }
@@ -1886,7 +1810,6 @@ header.bs-default {
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 /*----- blog-post one -----*/
 .bs-blog-post.one .bs-blog-thumb .circle_btn {
   transform: translate(-50%, -50%) rotate(45deg) scale(1.8);
@@ -1905,7 +1828,6 @@ header.bs-default {
   top: 50%;
   visibility: visible;
 }
-
 /*----- blog-post two -----*/
 .bs-blog-post.two {
   background: unset;
@@ -1923,7 +1845,6 @@ header.bs-default {
 .bs-blog-post.two:hover {
   box-shadow: unset;
 }
-
 /*----- blog-post overlay -----*/
 .bs-blog-post.three {
   position: relative;
@@ -1979,7 +1900,6 @@ header.bs-default {
   top: 0;
   z-index: 0;
 }
-
 /* --blog--four-- */
 .bs-blog-post.four {
   display: flex;
@@ -2015,7 +1935,6 @@ header.bs-default {
   margin-left: unset;
   margin-right: -70px;
 }
-
 /*----- blog-post five -----*/
 .bs-blog-post.five .bs-blog-thumb {
   border-radius: 20px;
@@ -2073,7 +1992,6 @@ header.bs-default {
   top: -60px;
   right: 24px;
 }
-
 /*----- blog-post six -----*/
 .bs-blog-post.six {
   position: relative;
@@ -2148,7 +2066,6 @@ header.bs-default {
   bottom: 0;
   left: 0;
 }
-
 /*----- blog-post list -----*/
 .list-blog.bs-blog-post {
   display: grid;
@@ -2196,7 +2113,6 @@ header.bs-default {
   max-width: 100%;
   height: auto;
 }
-
 /*----- List small-post-widget -----*/
 .small-post-list-widget .col-grid-2 {
   display: grid;
@@ -2207,7 +2123,6 @@ header.bs-default {
   width: 34%;
   height: 150px;
 }
-
 /*----- Recent small-post -----*/
 .bs-recent-blog-post {
   margin-bottom: 30px;
@@ -2251,7 +2166,6 @@ header.bs-default {
   margin-left: 0;
   border-radius: var(--bxbra);
 }
-
 /*----- List small-post -----*/
 .small-post {
   position: relative;
@@ -2302,7 +2216,6 @@ header.bs-default {
   line-height: 1.3;
   text-align: start;
 }
-
 /*----- blog-post category -----*/
 .bs-blog-category {
   position: relative;
@@ -2386,7 +2299,6 @@ header.bs-default {
   font-weight: 400;
   line-height: 1.5rem;
 }
-
 /*----- blog-post meta -----*/
 .bs-blog-meta {
   margin-bottom: 20px;
@@ -2439,7 +2351,6 @@ header.bs-default {
   width: 80px;
   height: 80px;
 }
-
 /*----- blog-post post-share-icons -----*/
 .post-share-icons {
   display: flex;
@@ -2462,7 +2373,6 @@ header.bs-default {
   overflow: hidden;
   transition: all 0.2s;
 }
-
 /*----- blog-post single -----*/
 .bs-single-head .bs-header {
   z-index: 1;
@@ -2819,7 +2729,6 @@ header.bs-default {
 .bs-info-author-block.py-4.px-3.mb-4 .bs-author-pic img {
   margin: 0;
 }
-
 /*----- Related Posts -----*/
 .bs-related-post-info {
   margin-bottom: 50px;
@@ -2830,12 +2739,10 @@ header.bs-default {
 .bs-related-post-info .link-div{
   z-index: 1;
 }
-
 /* Fix Categories  */
 .bs-related-post-info .bs-blog-post.three .bs-blog-category>*:not(:where(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4))) {
   display: none;
 }
-
 /*----- comments -----*/
 .bs-blog-post img {
   max-width: 100%;
@@ -2906,7 +2813,6 @@ header.bs-default {
   text-align: end;
   right: 2.5rem;
 }
-
 #comments img {
   max-width: 100%;
 }
@@ -2934,11 +2840,9 @@ header.bs-default {
   z-index: 0;
   padding: 16px 40px 16px 0;
 }
-
 textarea {
   height: 250px;
 }
-
 /*----- masonary -----*/
 .bs-masonry-columns {
   -moz-columns: 3;
@@ -2993,7 +2897,6 @@ textarea {
 .bs-widget ul li .sub-menu {
   padding: 0 0 0 15px;
 }
-
 /*---------------------------------------
 =========================================
   widget Titlle
@@ -3212,7 +3115,6 @@ textarea {
   vertical-align: middle;
   margin-right: 5px;
 }
-
 /*--search_bar--*/
 .wp-block-search .wp-block-search__inside-wrapper {
   display: flex;
@@ -3264,7 +3166,6 @@ textarea {
 .search-form .search-field {
   margin-bottom: 0;
 }
-
 /*--/search_bar--*/
 .widget_block {
   padding-bottom: 30px;
@@ -3286,7 +3187,6 @@ textarea {
   padding: 0;
   position: relative;
 }
-
 /* --------------------------------------
 =========================================
 	Page Title
@@ -3315,7 +3215,6 @@ textarea {
 .bs-card-box.page-entry-title+.row .page-title {
   display: none;
 }
-
 /* --------------------------------------
 =========================================
 	bs-sidebar
@@ -3603,7 +3502,6 @@ textarea {
   content: "\f324";
   font-family: "dashicons";
 }
-
 /* ---Popular_tags---*/
 .bs-widget .bs-widget-tags,
 .bs-widget .widget_tag_cloud {
@@ -3628,7 +3526,6 @@ textarea {
   border-radius: 0;
   text-transform: capitalize;
 }
-
 /*----- blog-post slider -----*/
 .mainfeatured {
   background-repeat: no-repeat;
@@ -3761,7 +3658,6 @@ textarea {
 .bs-slide .inner .title {
   font-size: 38px;
 }
-
 /*---------------------------------------
 =========================================
 	Multi Post Widget
@@ -3849,27 +3745,22 @@ textarea {
 .bs-marquee .marquee-item .item .title::before {
   content: attr(data-title);
 }
-
 @keyframes marquee {
   0% {
     translate: -100%;
   }
-
   100% {
     translate: 0%;
   }
 }
-
 @keyframes marqueel {
   0% {
     translate: 100%;
   }
-
   100% {
     translate: 0%;
   }
 }
-
 /*section hero*/
 .section-hero {
   position: relative;
@@ -3955,7 +3846,6 @@ textarea {
   display: block;
   border-radius: 10px;
 }
-
 /*bs featured categorys*/
 .bs-featured-category {
   margin-top: 30px;
@@ -4125,7 +4015,6 @@ textarea {
 .bs-featured-category.five .bs-widget .inner-content .bs-arrow-btn {
   display: none;
 }
-
 /*---------------------------------------
 =========================================
 	Advertising Banner
@@ -4134,7 +4023,6 @@ textarea {
 .advertising-banner .img-fluid.pull-right img {
   margin: 0 auto;
 }
-
 /*---------------------------------------
   Footer CSS
 -----------------------------------------*/
@@ -4170,11 +4058,9 @@ textarea {
 .missed .link-div {
   z-index: 1;
 }
-
 footer.one .bs-footer-widget-area {
   padding: 60px 0 0px;
 }
-
 footer.one .bs-footer-widget-area .bs-inner-wrap {
   display: grid;
   grid-template-columns: auto auto 1fr;
@@ -4183,7 +4069,6 @@ footer.one .bs-footer-widget-area .bs-inner-wrap {
   position: relative;
   z-index: 1;
 }
-
 footer.one .bs-footer-widget-area .bs-inner-wrap .lineleft {
   width: 2px;
   height: 100%;
@@ -4192,7 +4077,6 @@ footer.one .bs-footer-widget-area .bs-inner-wrap .lineleft {
   left: 0;
   display: block;
 }
-
 footer.one .bs-footer-widget-area .bs-inner-wrap .linehori {
   width: 100%;
   height: 2px;
@@ -4201,38 +4085,30 @@ footer.one .bs-footer-widget-area .bs-inner-wrap .linehori {
   left: 0;
   display: block;
 }
-
 footer.one .bs-footer-widget-area .bs-inner-wrap .bs-widget:is(.has-full-width) {
   position: relative;
   grid-column: 1/-1;
 }
-
 footer.one .bs-footer-bottom-area {
   padding: 40px 0;
 }
-
 footer.one .bs-footer-bottom-area .site-branding-text {
   margin-top: 10px;
 }
-
 footer.one .bs-footer-bottom-area .site-branding-text .site-title-footer a {
   font-size: 40px;
   font-weight: 600;
 }
-
 footer.one .bs-footer-bottom-area .bs-social {
   justify-content: end;
 }
-
 footer.one .bs-footer-copyright {
   border-top-width: 1px;
   border-top-style: solid;
 }
-
 footer.one .bs-footer-copyright .bs-social {
   justify-content: end;
 }
-
 footer.one .bs-footer-copyright .info-right {
   display: flex;
   justify-content: end;
@@ -4240,34 +4116,28 @@ footer.one .bs-footer-copyright .info-right {
   flex-wrap: wrap;
   margin-bottom: 0;
 }
-
 footer.one .bs-footer-copyright p {
   margin-bottom: 0;
 }
-
 footer.two .bs-footer-widget-area {
   padding: 0;
 }
-
 footer.two .bs-footer-widget-area .row {
   padding: 50px 50px 20px 50px;
   border-radius: 20px;
   margin-right: 0;
   margin-left: 0;
 }
-
 footer.three {
   z-index: 0;
   position: relative;
 }
-
 footer.three .overlay {
   background: #1A1C1F;
   padding: 50px 0px 0 0px;
   border-radius: 50px 50px 0 0;
   position: relative;
 }
-
 footer.three .overlay::before {
   content: "";
   position: absolute;
@@ -4277,42 +4147,33 @@ footer.three .overlay::before {
   z-index: -1;
   animation: animfooter 5s linear infinite;
 }
-
 footer.three .overlay .bs-footer-widget-area .bs-widget .bs-widget-title {
   border: none;
 }
-
 footer.four .bs-footer-widget-area .bs-widget .bs-widget-title {
   border: none;
 }
-
 footer .widget_categories ul li {
   display: flex;
   justify-content: space-between;
 }
-
 @keyframes animfooter {
   0% {
     transform: rotate(0deg);
   }
-
   25% {
     transform: rotate(2.5deg);
   }
-
   75% {
     transform: rotate(5deg);
   }
-
   100% {
     transform: rotate(0deg);
   }
 }
-
 footer {
   /*-----middile_footer---*/
 }
-
 footer h3 {
   margin: 0 0 30px 0;
   font-size: 22px;
@@ -4320,36 +4181,29 @@ footer h3 {
   position: relative;
   padding: 0;
 }
-
 footer .bs-widget {
   background: unset;
   box-shadow: none !important;
   margin-bottom: 0;
   gap: 30px 0;
 }
-
 footer .bs-widget .footer-logo {
   margin: 0 0 60px 0;
 }
-
 footer .bs-recent-blog-post .small-post {
   padding: 0.5rem 0;
 }
-
 footer .bs-footer-copyright {
   padding: 23px 0;
 }
-
 footer .bs-footer-copyright .footer-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 footer .bs-footer-copyright .footer-inner .copyright p {
   margin: 0;
 }
-
 footer .bs-footer-copyright .footer-inner .footer-social ul {
   display: flex;
   align-items: color;
@@ -4394,7 +4248,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
 .align_cls:has(.list-blog) {
   row-gap: 50px;
 }
-
 /* Cart CSS */
 .wc-block-cart__submit-button {
   background: var(--pri-color);
@@ -4402,13 +4255,11 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
   border-radius: 50px;
   text-decoration: none;
 }
-
 @media (min-width: 992px) and (max-width: 1200px) {
   .nav-wp {
     display: unset;
   }
 }
-
 @media (max-width: 991.98px) {
 
   /* ---------header------------*/
@@ -4438,7 +4289,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     width: 100%;
     box-shadow: 0px 4px 10px 0 #00000020;
   }
-
   ul.sm-clean li a {
     padding: 1.5rem 1.25rem;
   }
@@ -4482,7 +4332,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     padding: 0;
   }
 }
-
 @media (max-width: 767.98px) {
   .list-blog.bs-blog-post {
     grid-template-columns: repeat(1, 1fr);
@@ -4526,14 +4375,12 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
   .missedslider {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
   footer.one .bs-footer-bottom-area .bs-social {
     justify-content: center;
   }
   .footer-logo .site-branding-text {
     text-align: center;
   }
-
   footer.one .bs-footer-copyright .info-right {
     justify-content: center;
     padding: 0;
@@ -4581,7 +4428,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     padding: 6px 15px;
   }
 }
-
 @media (max-width: 575px) {
   .header-main .header-center .logo {
     margin-bottom: 15px;
@@ -4631,7 +4477,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     font-size: 16px;
   }
 }
-
 @media (max-width: 375px) {
   .justify-space-between {
     justify-content: end;
@@ -4665,7 +4510,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     right: 0.5rem;
   }
 }
-
 @media (min-width: 768px) {
   .header-two .header-top .justify-space-between {
     justify-content: space-between;
@@ -4740,7 +4584,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     gap: 0;
   }
 }
-
 @media (min-width: 992px) {
   .col-lg-auto {
     flex: 0 0 auto;
@@ -4810,7 +4653,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     gap: 0;
   }
 }
-
 @media (min-width: 576px) and (max-width: 767px) {
 
   /*------header-top---*/
@@ -4828,7 +4670,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     height: 170px;
   }
 }
-
 @media (min-width: 375px) and (max-width: 575px) {
   .col-xxl {
     flex: 1 0 0%;
@@ -4864,7 +4705,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     height: 170px;
   }
 }
-
 /*---------media_query-----*/
 @media (max-width: 1199px) {
   .header-main .header-center .header-add img {
@@ -4874,7 +4714,6 @@ footer .bs-footer-copyright .footer-inner .footer-social ul {
     padding: 20px 16px;
   }
 }
-
 @media (max-width: 991px) {
   .header-main .header-center .header-add img {
     max-width: 430px;
