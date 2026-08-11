@@ -723,10 +723,10 @@ ol.wp-block-latest-comments li {
 .bs-sidebar .bs-widget ul.bs-social li a {
 	color: #fff;
 }
-.bs-sidebar .bs-widget.widget_blogdata-author-widget ul.bs-social li a i {
+.bs-widget.widget_blogdata-author-widget ul.bs-social li a i {
 	color: var(--head-color);
 }
-.bs-sidebar .bs-widget.widget_blogdata-author-widget ul.bs-social li a:hover i {
+.bs-widget.widget_blogdata-author-widget ul.bs-social li a:hover i {
 	color: var(--pri-color);
 }
 .bs-sidebar .bs-widget .bs-widget-tags a,
@@ -813,7 +813,7 @@ ol.wp-block-latest-comments li {
 .wp-block-latest-posts li:has(.wp-block-latest-posts__featured-image) .wp-block-latest-posts__post-title {
 	color: var(--head-color);
 }
-.bs-sidebar .bs-widget.widget_blogdata-author-widget {
+.bs-widget.widget_blogdata-author-widget {
 	background-color: var(--border-color);
 }
 /*==================== general ====================*/
@@ -1182,10 +1182,10 @@ footer .bs-widget.widget_search .btn:focus {
 	border-color: var(--secondary-color);
 }
 footer .bs-widget .bs-author h4 {
-	color: #fff;
+	color: var(--head-color);
 }
 footer .bs-widget .bs-author p {
-	color: #e8e8e8;
+	color: var(--text-color);
 }
 footer .bs-recent-blog-post .small-post .img-small-post.right {
 	border-color: #fff;

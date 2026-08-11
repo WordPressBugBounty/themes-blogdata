@@ -117,3 +117,12 @@ function blogdata_sanitize_range_value( $input ) {
 	}
 	return floatval( $input );
 }
+
+
+if ( ! function_exists( 'blogdata_sanitize_radio' ) ) :
+function blogdata_sanitize_radio( $val, $setting ) {
+        $val = sanitize_key( $val );
+        $choices = $setting->manager->get_control( $setting->id )->choices;
+        return array_key_exists( $val, $choices ) ? $val : $setting->default;
+    }
+endif;
