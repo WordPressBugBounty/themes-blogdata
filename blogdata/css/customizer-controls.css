@@ -413,37 +413,6 @@ li.customize-control-color .wp-picker-container .wp-color-result.button {
   z-index: 1;
   border-radius: 4px;
 }
-#customize-control-main_slider_position .custom-radio-control .radio-button-label input + span {
-  width: auto;
-  height: auto;
-  padding: 6px 12px;
-  margin: 10px 5px;
-  font-size: 13px;
-}
-.custom-radio-control .radio-button-label input[value="italic"] + span {
-  font-style: italic;
-  font-family: auto;
-}
-.custom-radio-control .radio-button-label[value="normal"] span:hover .radio-tooltip.normal {
-  visibility: visible;
-}
-.custom-radio-control .radio-button-label[value="italic"] span:hover .radio-tooltip.italic {
-  visibility: visible;
-  font-style: normal;
-  font-family: normal;
-}
-.custom-radio-control .radio-button-label[value="none"] span:hover .radio-tooltip.none {
-  visibility: visible;
-}
-.custom-radio-control .radio-button-label[value="capitalize"] span:hover .radio-tooltip.capitalize {
-  visibility: visible;
-}
-.custom-radio-control .radio-button-label[value="lowercase"] span:hover .radio-tooltip.lowercase {
-  visibility: visible;
-}
-.custom-radio-control .radio-button-label[value="uppercase"] span:hover .radio-tooltip.Uppercase {
-  visibility: visible;
-}
 #customize-controls .ui-checkboxradio-checked input + span {
   background-color: #0075ff;
   color: #fff;
@@ -469,26 +438,25 @@ li#accordion-section-blogdata_pro_upsell h3{
   display: flex;
   justify-content: space-between;
 }
-
 .blogdata-notice_text .panel-column-6{
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 .panel-column-6 .blogdata-notice-buttons{
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 .panel-column-6 .blogdata-notice-links {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .blogdata-notice-link{ 
   display:inline;
@@ -501,8 +469,8 @@ li#accordion-section-blogdata_pro_upsell h3{
   gap: 5px;
 }
 .admin-bar .blogdata-notice-buttons :is( .blogdata-btn-get-started, .blogdata-btn-get-started-customize) .dashicons {
-    line-height: 1.2;
-    color: inherit !important;
+  line-height: 1.2;
+  color: inherit !important;
 }
 /* admin notice media query */
 @media(max-width: 767px){  
