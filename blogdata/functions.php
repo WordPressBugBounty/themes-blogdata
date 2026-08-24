@@ -1,5 +1,11 @@
-<?php define( 'BLOGDATA_THEME_DIR', get_template_directory() . '/' );
-	define( 'BLOGDATA_THEME_URI', get_template_directory_uri() . '/' );
+<?php 
+
+	if ( ! defined( 'BLOGDATA_THEME_DIR' ) ) {
+		define( 'BLOGDATA_THEME_DIR', get_template_directory() . '/' );
+	}
+	if ( ! defined( 'BLOGDATA_THEME_URI' ) ) {
+		define( 'BLOGDATA_THEME_URI', get_template_directory_uri() . '/' );
+	}
 	
 	$blogdata_theme_path = get_template_directory() . '/inc/ansar/';
 

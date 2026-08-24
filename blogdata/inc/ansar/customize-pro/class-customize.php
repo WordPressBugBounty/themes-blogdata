@@ -39,6 +39,12 @@ final class Blogdata_Customize {
 	private function setup_actions() {
 		// Register panels, sections, settings, controls, and partials.
 		add_action( 'customize_register', array( $this, 'sections' ) );
+
+		add_action( 'after_setup_theme', array( $this, 'customizer_helpers' ) );
+		
+		add_action( 'customize_register', array( $this, 'customize_controls' ), 10 );
+
+		add_action( 'customize_register', array( $this, 'customize_options' ) );
 		// Register scripts and styles for the controls.
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ), 0 );
 	}
@@ -78,6 +84,38 @@ final class Blogdata_Customize {
 				)
 			)
 		);
+	}
+	/**
+	 * Sets up the customizer Controls.
+	*/
+	public function customize_controls( $wp_customize ) {
+		// Load customize controls.
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/controls/customize-control-helper.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customizer-repeater/customizer-repeater-control.php';
+    }
+	/**
+	 * Loads Customizer helper functions and sanitization callbacks.
+	 *
+	 * @since 1.0.0
+	 */
+	public function customizer_helpers() {
+
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/customizer-callback.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/selective-refresh-and-partial.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/customizer-default.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/customizer-sanitize.php';
+	}
+	/**
+	 * Sets up the customizer options.
+	*/
+	public function customize_options( $wp_customize ) {
+
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/header-options.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/theme-options.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/theme-layout.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/customize-core.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/frontpage-options.php';
+		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/footer-options.php';
 	}
 	/**
 	 * Loads theme customizer CSS.
