@@ -15,19 +15,22 @@ function blogdata_theme_fonts() {
     }
 }
 function blogdata_get_google_fonts_list() {
-    return array(
-        'DM Sans',
-        'Open Sans',
-        'Kalam',
-        'Rokkitt',
-        'Jost',
-        'Poppins',
-        'Lato',
-        'Noto Serif',
-        'Raleway',
-        'Roboto',
-        'Inter',
-    );
+
+	$fonts = array(
+		'DM Sans',
+		'Open Sans',
+		'Kalam',
+		'Rokkitt',
+		'Jost',
+		'Poppins',
+		'Lato',
+		'Noto Serif',
+		'Raleway',
+		'Roboto',
+		'Inter',
+	);
+
+	return apply_filters( 'blogdata_google_fonts_list', $fonts );
 }
 
 function blogdata_fonts_url() {

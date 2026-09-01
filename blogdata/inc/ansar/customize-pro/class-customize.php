@@ -109,8 +109,25 @@ final class Blogdata_Customize {
 	 * Sets up the customizer options.
 	*/
 	public function customize_options( $wp_customize ) {
+		// Panels and Sections 
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/panels-and-sections.php';
 
-		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/header-options.php';
+		// Header Settings
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/header-image.php';
+
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/site-identity/logo.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/site-identity/site-title.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/banner-ads.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/sticky-header.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/search.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/dark-mode.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/subscribe.php';
+		require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/menu-sidebar.php';
+		
+		if( class_exists( 'WooCommerce' ) ) { 
+			require BLOGDATA_THEME_DIR . 'inc/ansar/customize/settings/header/cart.php';
+		}
+		
 		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/theme-options.php';
 		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/theme-layout.php';
 		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/customize-core.php';
