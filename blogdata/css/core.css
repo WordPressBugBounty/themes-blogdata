@@ -6,7 +6,7 @@
   --bxsh: 0 1px 3px rgb(0 0 0 / 15%);
   --bxshover: 0 4px 60px 0px rgba(0 0 0 / 20%);
   --bstras: 0 4px 60px 0px rgba(0 0 0 / 20%);
-  --fontWeight: 700;
+  --fontWeight: 600;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -719,10 +719,11 @@ html {
 .site-branding-text .site-title {
   font-size: 40px;
   word-break: break-word;
-  font-weight: 600;
+  font-weight: var(--fontWeight);
   line-height: 1.4;
   letter-spacing: -0.036em;
   margin-bottom: 0.5rem;
+  font-family: var(--Fontheading);
 }
 .site-branding-text .site-description {
   margin-bottom: 0;

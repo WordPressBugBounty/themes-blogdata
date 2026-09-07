@@ -58,9 +58,9 @@ function blogdata_customize_options() {
 
   if ( get_theme_mod('enable_blogdata_typo', false) == true) {
     /* Headings Typography*/
-    $blogdata_custom_css .= 'h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .wp-block-search__label { 
-                              font-family:'. esc_attr(blogdata_get_option('heading_fontfamily')).' !important;
-                              font-weight:'. esc_attr(blogdata_get_option('heading_fontweight')).' !important;
+    $blogdata_custom_css .= ':root { 
+                              --Fontheading:'. esc_attr(blogdata_get_option('heading_fontfamily')).' !important;
+                              --fontWeight:'. esc_attr(blogdata_get_option('heading_fontweight')).' !important;
                             }';
       /* Menus Font Family*/
     $blogdata_custom_css .= '.navbar-wp .sm-clean > li > a, .navbar-wp .dropdown-menu > li > a { 
