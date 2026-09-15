@@ -127,8 +127,8 @@ function blogdata_setup() {
 	) );
 
 	$args = array(
-    'default-color' => '#eee',
-    'default-image' => '',
+		'default-color' => '#fff',
+		'default-image' => '',
 	);
 	add_theme_support( 'custom-background', $args );
 

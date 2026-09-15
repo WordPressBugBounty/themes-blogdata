@@ -15,15 +15,17 @@ function blogdata_scripts() {
 	
 	wp_enqueue_style('wp-core', get_template_directory_uri() . '/css/wp-core.css');
 	
-	wp_enqueue_style('woocommerce-css', get_template_directory_uri() . '/css/woo.css');
-
 	wp_enqueue_style('default', get_template_directory_uri() . '/css/colors/default.css');
-
+	
 	wp_enqueue_style('swiper-bundle-css', get_template_directory_uri() . '/css/swiper-bundle.css');
 	
 	wp_enqueue_style('menu-core-css', get_template_directory_uri() . '/css/sm-core-css.css');
 	
 	wp_enqueue_style('smartmenus',get_template_directory_uri().'/css/sm-clean.css');	 
+	
+	if (class_exists('WooCommerce')) {
+		wp_enqueue_style('woocommerce-css', BLOGDATA_THEME_URI . 'css/woo.css', array(), BLOGDATA_THEME_VERSION );
+	}
 
 	/* Js script */
 

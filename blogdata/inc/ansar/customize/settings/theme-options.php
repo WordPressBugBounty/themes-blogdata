@@ -773,38 +773,3 @@ Blogdata_Customizer_Control::add_field(
         'sanitize_callback' => 'blogdata_sanitize_select',
 	)
 );
-
-function blogdata_template_page_sanitize_text( $input ) {
-
-    return wp_kses_post( force_balance_tags( $input ) );
-
-}
-
-function blogdata_header_info_sanitize_text( $input ) {
-                    
-    return wp_kses_post( force_balance_tags( $input ) );
-
-}
-    
-if ( ! function_exists( 'blogdata_sanitize_text_content' ) ) :
-    /**
-     * Sanitize text content.
-     *
-     * @since 1.0.0
-     *
-     * @param string               $input Content to be sanitized.
-     * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
-     * @return string Sanitized content.
-     */
-    function blogdata_sanitize_text_content( $input, $setting ) {
-
-        return ( stripslashes( wp_filter_post_kses( addslashes( $input ) ) ) );
-
-    }
-endif;
-    
-function blogdata_header_sanitize_checkbox( $input ) {
-    // Boolean check 
-    return ( ( isset( $input ) && true == $input ) ? true : false );
-        
-}

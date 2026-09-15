@@ -45,8 +45,12 @@ final class Blogdata_Customize {
 		add_action( 'customize_register', array( $this, 'customize_controls' ), 10 );
 
 		add_action( 'customize_register', array( $this, 'customize_options' ) );
+
 		// Register scripts and styles for the controls.
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ), 0 );
+
+		// Enqueues our Customizer preview assets.
+		add_action( 'customize_preview_init', array( $this, 'load_preview_assets' ) );
 	}
 	/**
 	 * Sets up the customizer sections.
@@ -133,6 +137,13 @@ final class Blogdata_Customize {
 		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/customize-core.php';
 		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/frontpage-options.php';
 		require BLOGDATA_THEME_DIR . '/inc/ansar/customize/settings/footer-options.php';
+
+		// Customize Tweaks
+		$wp_customize->get_setting('blogname')->transport         = 'postMessage';
+		$wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
+		$wp_customize->get_setting('custom_logo')->transport      = 'postMessage';
+		$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+
 	}
 	/**
 	 * Loads theme customizer CSS.
@@ -145,6 +156,18 @@ final class Blogdata_Customize {
 		wp_enqueue_script( 'blogdata-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/ansar/customize-pro/customize-controls.js', array( 'customize-controls' ) );
 		wp_enqueue_style( 'blogdata-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/ansar/customize-pro/customize-controls.css' );
 	}
+		
+	/**
+	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+	 */
+	public function load_preview_assets() {
+
+		wp_enqueue_media();
+
+		// Enqueue the customizer preview script.
+		wp_enqueue_script('blogdata-customizer-preview', BLOGDATA_THEME_URI . '/js/customizer.js', ['customize-preview'], BLOGDATA_THEME_VERSION, true);
+	}
+	
 }
 // Doing this customizer thang!
 Blogdata_Customize::get_instance();

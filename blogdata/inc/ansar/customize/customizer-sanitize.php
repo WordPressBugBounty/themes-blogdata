@@ -142,3 +142,6 @@ function blogdata_repeater_sanitize($input){
 	}
 	return $input;
 }
+function blogdata_sanitize_text( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
+}
