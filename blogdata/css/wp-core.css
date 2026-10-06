@@ -557,7 +557,7 @@ pre.wp-block-code a,
     position: absolute;
     content: '';
     height: calc(100% + 25px);
-    width: .1rem;
+    width: 1px;
     background-color: rgba(185, 185, 185, 0.4);
     left: -2.5rem;
     top: -1.5rem;
@@ -568,14 +568,14 @@ pre.wp-block-code a,
 #comments .comment-list .children>li:after {
     position: absolute;
     content: '';
-    height: .1rem;
+    height: 1px;
     width: 2.5rem;
     background-color: rgba(185, 185, 185, 0.4);
     left: -2.5rem;
     top: 5.5rem;
 }
 .comment-metadata .edit-link{
-    padding-right: 3rem;
+    padding-right: 60px;
     font-size: 14px;
 }
 .comment-body .reply { 
