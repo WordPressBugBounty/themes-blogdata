@@ -2,10 +2,10 @@
 Contributors: Themeansar
 Author: Themeansar
 Requires at least: WordPress 6.0
-Tested up to: WordPress 7.0
+Tested up to: WordPress 7.1
 Requires PHP: 7.4
-Stable tag: 2.0.0
-Version: 2.0.0
+Stable tag: 2.0.1
+Version: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -401,3 +401,6 @@ License: CC0 Public Domain
 
 = Version 2.0.0
 * Fixed Styling Issue.
+
+= Version 2.0.1
+* Fixed RTL Styling Issues.
