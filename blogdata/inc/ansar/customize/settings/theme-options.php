@@ -736,7 +736,7 @@ Blogdata_Customizer_Control::add_field(
         'label' => esc_html__('Font Family', 'blogdata'),
 		'section'  => 'blogdata_general_typography',
         'default' => $blogdata_default['heading_fontfamily'],
-        'choices'   => $font_family ,
+        'choices'   => $font_family,
         'sanitize_callback' => 'blogdata_sanitize_select',
 	)
 );
@@ -747,7 +747,7 @@ Blogdata_Customizer_Control::add_field(
         'label' => esc_html__('Font Weight', 'blogdata'),
 		'section'  => 'blogdata_general_typography',
         'default' => $blogdata_default['heading_fontweight'],
-        'choices'   => $font_weight ,
+        'choices'   => $font_weight,
         'sanitize_callback' => 'blogdata_sanitize_select',
 	)
 );
@@ -769,7 +769,7 @@ Blogdata_Customizer_Control::add_field(
         'label' => esc_html__('Font Family', 'blogdata'),
 		'section'  => 'blogdata_general_typography',
         'default' => $blogdata_default['blogdata_menu_fontfamily'],
-        'choices'   => $font_family ,
+        'choices'   => $font_family,
         'sanitize_callback' => 'blogdata_sanitize_select',
 	)
 );

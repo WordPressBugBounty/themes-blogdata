@@ -10,22 +10,7 @@
 
 	var myCustomizer = window.parent.window.wp.customize;
 
-	// Site title and description.
-	// wp.customize( 'blogname', function( value ) {
-	// 	value.bind( function( to ) {
-	// 		$( '.site-title a' ).text( to );
-	// 		$( '.site-title-footer a' ).text( to );
-	// 	} );
-	// } );
-	// wp.customize( 'blogdescription', function( value ) {
-	// 	value.bind( function( to ) {
-	// 		$( '.site-description' ).text( to );
-	// 		$( '.site-description-footer' ).text( to );
-	// 	} );
-	// } );
-	
-	// Header text color.
-	
+	// Header text color.	
 	// Header text hide and show and text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		if(value() == 'blank'){

@@ -15,14 +15,30 @@ function blogdata_theme_fonts() {
 }
 
 function blogdata_fonts_url() {
-    $h = blogdata_get_option( 'heading_fontfamily' );
-    $hw = blogdata_get_option( 'heading_fontweight' );
-    $m = blogdata_get_option( 'blogdata_menu_fontfamily' );
-    $mw = get_theme_mod( 'blogdata_menu_fontweight', '500' );
+    $fonts = array(
+        'Inter' => array( '400', '500', '700' ),
+    );
 
-    return add_query_arg( array(
-        'family'  => implode( '|', array_unique( array( "$h:$hw,700", "$m:$mw,400", 'Inter:400,500,700' ) ) ),
-        'subset'  => 'latin,latin-ext',
-        'display' => 'swap',
-    ), 'https://fonts.googleapis.com/css' );
+    $heading_font   = blogdata_get_option( 'heading_fontfamily' );
+    $heading_weight = blogdata_get_option( 'heading_fontweight' );
+    $menu_font      = blogdata_get_option( 'blogdata_menu_fontfamily' );
+    $menu_weight    = get_theme_mod( 'blogdata_menu_fontweight', '500' );
+
+    foreach ( array( $heading_font => $heading_weight, $menu_font => $menu_weight ) as $font => $weight ) {
+        $font = trim( explode( ',', $font )[0] );
+
+        if ( $font ) {
+            $fonts[ $font ][] = $weight ?: '400';
+        }
+    }
+
+    $families = array();
+
+    foreach ( $fonts as $font => $weights ) {
+        $families[] = 'family=' . rawurlencode(
+            $font . ':wght@' . implode( ';', array_unique( $weights ) )
+        );
+    }
+
+    return 'https://fonts.googleapis.com/css2?' . implode( '&', $families ) . '&display=swap';
 }
