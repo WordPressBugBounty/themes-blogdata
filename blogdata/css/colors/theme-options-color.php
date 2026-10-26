@@ -59,12 +59,13 @@ function blogdata_customize_options() {
   if ( get_theme_mod('enable_blogdata_typo', false) == true) {
     /* Headings Typography*/
     $blogdata_custom_css .= ':root { 
-                              --Fontheading:'. esc_attr(blogdata_get_option('heading_fontfamily')).' !important;
-                              --fontWeight:'. esc_attr(blogdata_get_option('heading_fontweight')).' !important;
+                              --Fontheading:'. esc_attr(blogdata_get_option('heading_fontfamily')).';
+                              --fontWeight:'. esc_attr(blogdata_get_option('heading_fontweight')).';
+                              --menus-font:'. esc_attr(blogdata_get_option('blogdata_menu_fontfamily')).';
                             }';
       /* Menus Font Family*/
     $blogdata_custom_css .= '.navbar-wp .sm-clean > li > a, .navbar-wp .dropdown-menu > li > a { 
-                              font-family:'. esc_attr(get_theme_mod('blogdata_menu_fontfamily','Inter')).' !important; 
+                              font-family: var(--menus-font); 
                             }';
   }
 		

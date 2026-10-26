@@ -143,6 +143,40 @@
 		}
 	});
 
+	function customizePreviewStyle(settingId, target, property, unit = '') {
+		wp.customize(settingId, function(value) {
+			value.bind(function(newVal) {
+				if (property.startsWith('--')) { 
+					document.documentElement.style.setProperty(property, newVal + unit);
+				} else { 
+					let styleElement = document.getElementById('customizer-preview-styles');
+					 
+					if (!styleElement) {
+						styleElement = document.createElement('style');
+						styleElement.id = 'customizer-preview-styles';
+						document.head.appendChild(styleElement);
+					}
+					 
+					let styleContent = styleElement.innerHTML;
+					 
+					const regex = new RegExp(`${target}\\s*{[^}]*}`, 'g');
+					styleContent = styleContent.replace(regex, '');
+					 
+					styleContent += `${target} { ${property}: ${newVal + unit}; }`;
+					 
+					styleElement.innerHTML = styleContent;
+				}
+			});
+		});
+	}
+	// For a CSS variable
+	customizePreviewStyle('heading_fontfamily', ':root', '--Fontheading', '');
+	customizePreviewStyle('heading_fontweight', ':root', '--fontWeight', '');
+	customizePreviewStyle('blogdata_menu_fontfamily', ':root', '--menus-font', '');
+
+	// For a normal CSS property
+	// customizePreviewStyle('blogdata_footer_copy_bg', 'footer .bs-footer-copyright', 'background-color','');
+
 } )( jQuery );
 
 
@@ -222,3 +256,29 @@
 	range_live_media_load( 'blogdata_footer_main_logo_height', 'footer .bs-footer-bottom-area .custom-logo, footer .bs-footer-copyright .custom-logo', [ 'height' ], 'px' );
 	
 } )( jQuery );
+
+(function (api) {
+  var seen = {}, s = {};
+  var map = { heading_fontfamily: 'hf', heading_fontweight: 'hw', blogdata_menu_fontfamily: 'mf' };
+  var clean = v => String(v || '').split(',')[0].replace(/['"]/g, '').trim();
+
+  function load(f, w) {
+    w = parseInt(w, 10);
+    if (!f || !(w >= 100 && w <= 900) || (seen[f] = seen[f] || {})[w]) return;
+    seen[f][w] = 1;
+    document.head.appendChild(Object.assign(document.createElement('link'), {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=' + encodeURIComponent(f).replace(/%20/g, '+') +
+            ':wght@' + Object.keys(seen[f]).sort((a, b) => a - b).join(';') + '&display=swap'
+    }));
+  }
+
+  Object.keys(map).forEach(id => api(id, o => {
+    s[map[id]] = o.get();
+    o.bind(v => {
+      s[map[id]] = v;
+      load(clean(s.hf), s.hw || 400);
+      load(clean(s.mf), 500);
+    });
+  }));
+})(wp.customize);

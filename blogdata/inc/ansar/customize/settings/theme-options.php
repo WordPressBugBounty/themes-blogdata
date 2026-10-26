@@ -737,6 +737,7 @@ Blogdata_Customizer_Control::add_field(
 		'section'  => 'blogdata_general_typography',
         'default' => $blogdata_default['heading_fontfamily'],
         'choices'   => $font_family,
+        'transport' => 'postMessage',
         'sanitize_callback' => 'blogdata_sanitize_select',
 	)
 );
@@ -748,6 +749,7 @@ Blogdata_Customizer_Control::add_field(
 		'section'  => 'blogdata_general_typography',
         'default' => $blogdata_default['heading_fontweight'],
         'choices'   => $font_weight,
+        'transport' => 'postMessage',
         'sanitize_callback' => 'blogdata_sanitize_select',
 	)
 );
@@ -770,6 +772,7 @@ Blogdata_Customizer_Control::add_field(
 		'section'  => 'blogdata_general_typography',
         'default' => $blogdata_default['blogdata_menu_fontfamily'],
         'choices'   => $font_family,
+        'transport' => 'postMessage',
         'sanitize_callback' => 'blogdata_sanitize_select',
 	)
 );
