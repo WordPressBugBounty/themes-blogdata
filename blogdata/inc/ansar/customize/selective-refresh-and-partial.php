@@ -121,10 +121,12 @@ function blogdata_customize_partial_subs_news_title() {
 }
 
 function blogdata_customize_partial_you_missed_title() {
-	if( get_theme_mod( 'you_missed_title' ) === "" ) return;
-	echo '<h2 class="title">'.get_theme_mod( 'you_missed_title' ).'</h2>';
+    $title = get_theme_mod( 'you_missed_title' );
+    if ( empty( $title ) ) {
+        return;
+    }
+    echo '<h2 class="title">' . esc_html( $title ) . '</h2>';
 }
-
 function blogdata_customize_partial_sidebar_menu() {
     return get_theme_mod( 'sidebar_menu' ); 
 }

@@ -53,11 +53,12 @@ function blogdata_body_classes($classes)
     }
     
     if ( isset( $_COOKIE["blogdata-site-mode-cookie"] ) ) {
-        $classes[] = $_COOKIE["blogdata-site-mode-cookie"];
+        $cookie_val = sanitize_html_class( wp_unslash( $_COOKIE["blogdata-site-mode-cookie"] ) );
+        $allowed_modes = array( 'dark', 'defaultcolor' );
+        $classes[] = in_array( $cookie_val, $allowed_modes, true ) ? $cookie_val : 'defaultcolor';
     } else {
-    	$classes[] = get_theme_mod( 'blogdata_skin_mode', 'defaultcolor' );
+        $classes[] = sanitize_html_class( get_theme_mod( 'blogdata_skin_mode', 'defaultcolor' ) );
     }
-
     return $classes;
 }
 

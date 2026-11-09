@@ -220,9 +220,9 @@ add_action( 'after_setup_theme', 'blogdata_content_width', 0 );
  */
 function blogdata_widgets_init() {
 	
-	$blogdata_footer_column_layout = esc_attr(get_theme_mod('blogdata_footer_column_layout',3));
-	
-	$blogdata_footer_column_layout = 12 / $blogdata_footer_column_layout;
+	$columns = absint( get_theme_mod( 'blogdata_footer_column_layout', 3 ) );
+	$columns = ( $columns > 0 && $columns <= 4 ) ? $columns : 3;
+	$blogdata_footer_column_layout = 12 / $columns;
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Header Toggle Sidebar', 'blogdata' ),
@@ -261,12 +261,14 @@ add_action( 'widgets_init', 'blogdata_widgets_init' );
 /*  custom background
 /*-----------------------------------------------------------------------------------*/
 function blogdata_custom_background_function(){
-	$page_bg_image_url = get_theme_mod('blogdata_default_bg_image','');
-	if($page_bg_image_url!=''){
-		echo '<style>body{ background-image:url("'.get_template_directory_uri().'/images/bg-pattern/'.$page_bg_image_url.'");}</style>';
-	}
+    $page_bg_image_url = get_theme_mod( 'blogdata_default_bg_image', '' );
+    if ( ! empty( $page_bg_image_url ) ) {
+        $sanitized_bg = sanitize_file_name( $page_bg_image_url );
+        $bg_url = esc_url( get_template_directory_uri() . '/images/bg-pattern/' . $sanitized_bg );
+        echo '<style>body{ background-image:url("' . $bg_url . '");}</style>';
+    }
 }
-add_action('wp_head','blogdata_custom_background_function',10,0);
+add_action( 'wp_head', 'blogdata_custom_background_function', 10, 0 );
 
 /* Category Js */
 if(!function_exists('blogdata_category_js')):

@@ -39,10 +39,10 @@ class blogdata_author_info extends WP_Widget {
             <?php } ?>
             <div class="bs-author"> 
                 <?php if( !empty($instance['image_uri']) ){ ?> 
-                    <img class="rounded-circle" src="<?php echo esc_url($instance['image_uri']); ?>" alt="<?php echo apply_filters('widget_title', $instance['name']); ?>" />
+                    <img class="rounded-circle" src="<?php echo esc_url( $instance['image_uri'] ); ?>" alt="<?php echo esc_attr( apply_filters( 'widget_title', $instance['name'] ) ); ?>" />
                 <?php } ?>
-                <h4><?php echo $instance['name']; ?></h4>
-                <p><?php echo $instance['desc'] ?></p>
+                <h4><?php echo esc_html( $instance['name'] ); ?></h4>
+                <p><?php echo wp_kses_post( $instance['desc'] ); ?></p>
                 
                 <ul class="bs-social">
                     <?php if($instance['facebook'] !=''){ ?>
@@ -111,12 +111,10 @@ class blogdata_author_info extends WP_Widget {
             <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Author Image', 'blogdata'); ?></label><br/>
             <?php
             if ( !empty($instance['image_uri']) ) :
-
-                echo '<img class="custom_media_image_team" src="' . $instance['image_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="'.__( 'Uploaded image', 'blogdata' ).'" /><br />';
-
+                echo '<img class="custom_media_image_team" src="' . esc_url( $instance['image_uri'] ) . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" alt="'. esc_attr__( 'Uploaded image', 'blogdata' ) .'" /><br />';
             endif;
             ?>
-            <input type="text" class="widefat custom_media_url_team" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php if( !empty($instance['image_uri']) ): echo $instance['image_uri']; endif; ?>" style="margin-top:5px;">
+            <input type="text" class="widefat custom_media_url_team" name="<?php echo esc_attr( $this->get_field_name('image_uri') ); ?>" id="<?php echo esc_attr( $this->get_field_id('image_uri') ); ?>" value="<?php echo ! empty( $instance['image_uri'] ) ? esc_url( $instance['image_uri'] ) : ''; ?>" style="margin-top:5px;">
             <input type="button" class="button button-primary custom_media_button_team" id="custom_media_button_team" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php _e('Upload Image','blogdata'); ?>" style="margin-top:5px;">
         </p>
         <p>
@@ -135,7 +133,7 @@ class blogdata_author_info extends WP_Widget {
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="<?php echo $this->get_field_name('facebook'); ?>" id="<?php echo $this->get_field_id('facebook'); ?>" value="<?php if( !empty($instance['facebook']) ): echo $instance['facebook']; endif; ?>" class="widefat"/>
+                    <input type="text" name="<?php echo esc_attr( $this->get_field_name('facebook') ); ?>" id="<?php echo esc_attr( $this->get_field_id('facebook') ); ?>" value="<?php echo ! empty( $instance['facebook'] ) ? esc_url( $instance['facebook'] ) : ''; ?>" class="widefat"/>
                 </td>
             </tr>
             <tr>
@@ -145,7 +143,7 @@ class blogdata_author_info extends WP_Widget {
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="<?php echo $this->get_field_name('twt'); ?>" id="<?php echo $this->get_field_id('twt'); ?>" value="<?php if( !empty($instance['twt']) ): echo $instance['twt']; endif; ?>" class="widefat"/>
+                    <input type="text" name="<?php echo esc_attr( $this->get_field_name('twt') ); ?>" id="<?php echo esc_attr( $this->get_field_id('twt') ); ?>" value="<?php echo ! empty( $instance['twt'] ) ? esc_url( $instance['twt'] ) : ''; ?>" class="widefat"/>
                 </td>
             </tr>
             <tr>
@@ -155,7 +153,7 @@ class blogdata_author_info extends WP_Widget {
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="<?php echo $this->get_field_name('insta'); ?>" id="<?php echo $this->get_field_id('insta'); ?>" value="<?php if( !empty($instance['insta']) ): echo $instance['insta']; endif; ?>" class="widefat"/>
+                    <input type="text" name="<?php echo esc_attr( $this->get_field_name('insta') ); ?>" id="<?php echo esc_attr( $this->get_field_id('insta') ); ?>" value="<?php echo ! empty( $instance['insta'] ) ? esc_url( $instance['insta'] ) : ''; ?>" class="widefat"/>
                 </td>
             </tr>
             <tr>
@@ -165,7 +163,7 @@ class blogdata_author_info extends WP_Widget {
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="<?php echo $this->get_field_name('youtube'); ?>" id="<?php echo $this->get_field_id('youtube'); ?>" value="<?php if( !empty($instance['youtube']) ): echo $instance['youtube']; endif; ?>" class="widefat"/>
+                    <input type="text" name="<?php echo esc_attr( $this->get_field_name('youtube') ); ?>" id="<?php echo esc_attr( $this->get_field_id('youtube') ); ?>" value="<?php echo ! empty( $instance['youtube'] ) ? esc_url( $instance['youtube'] ) : ''; ?>" class="widefat"/>
                 </td>
             </tr>
             <tr>

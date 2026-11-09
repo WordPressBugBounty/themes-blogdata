@@ -17,8 +17,8 @@
         }
     } ?>
     <footer class="footer one <?php echo esc_attr($footer_bg_img != '' ? 'back-img' : '' ); ?>"
-    <?php if($footer_bg_img != '') { ?> style="background-image:url('<?php echo get_footer_bg_img()?>');" <?php } ?> >
-        <div class="overlay" style="background-color: <?php echo ($blogdata_footer_overlay_color);?>;">
+    <?php if ( ! empty( $footer_bg_img ) && get_footer_bg_img() ) { ?> style="background-image:url('<?php echo esc_url( get_footer_bg_img() ); ?>');" <?php } ?> >
+        <div class="overlay" style="background-color: <?php echo esc_attr( $blogdata_footer_overlay_color ); ?>;"></div>
             <!--Start bs-footer-widget-area-->
             <?php if ( is_active_sidebar( 'footer_widget_area' ) ) { ?>
                 <div class="bs-footer-widget-area">

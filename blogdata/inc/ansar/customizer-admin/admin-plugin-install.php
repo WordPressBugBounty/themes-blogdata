@@ -3,14 +3,23 @@
  * AJAX handler to store the state of dismissible notices.
  */
 function blogdata_ajax_notice_handler() {
-    if ( isset( $_POST['type'] ) ) {
-        // Pick up the notice "type" - passed via jQuery (the "data-notice" attribute on the notice)
-        $type = sanitize_text_field( wp_unslash( $_POST['type'] ) );
-        // Store it in the options table
-        update_option( 'dismissed-' . $type, TRUE );
+    if ( ! current_user_can( 'edit_theme_options' ) ) {
+        wp_send_json_error( array( 'message' => esc_html__( 'Unauthorized', 'blogdata' ) ), 403 );
     }
-}
 
+    check_ajax_referer( 'blogdata_dismiss_notice_nonce', 'security' );
+
+    if ( isset( $_POST['type'] ) ) {
+        $type = sanitize_key( wp_unslash( $_POST['type'] ) );
+        $allowed_notices = array( 'get_started' );
+
+        if ( in_array( $type, $allowed_notices, true ) ) {
+            update_option( 'dismissed-' . $type, true );
+            wp_send_json_success();
+        }
+    }
+    wp_send_json_error();
+}
 add_action( 'wp_ajax_blogdata_dismissed_notice_handler', 'blogdata_ajax_notice_handler' );
 
 function blogdata_deprecated_hook_admin_notice() {

@@ -82,9 +82,9 @@ if (!function_exists('blogdata_header_subs_section')) :
     $subsc_open_in_new  = get_theme_mod('subsc_open_in_new','true');
     $subs_title  = get_theme_mod('subs_news_title','Subscribe');
     if($blogdata_menu_subscriber == true) { ?> 
-    <a href="<?php echo esc_attr($subsc_link) ?>" class="subscribe-btn btn d-none d-lg-flex align-center" <?php if($subsc_open_in_new == true){ echo ' target="_blank"'; } ?>>
-      <i class="fas fa-<?php echo esc_html($subsc_icon) ?>"></i> <?php if(!empty($subs_title)){ echo '<span>'.$subs_title.'</span>';  } ?>
-    </a>
+      <a href="<?php echo esc_url( $subsc_link ); ?>" class="subscribe-btn btn d-none d-lg-flex align-center" <?php if ( $subsc_open_in_new == true ) { echo ' target="_blank" rel="noopener noreferrer"'; } ?>>
+        <i class="fas fa-<?php echo esc_attr( $subsc_icon ); ?>"></i> <?php if ( ! empty( $subs_title ) ) { echo '<span>' . esc_html( $subs_title ) . '</span>'; } ?>
+      </a>
     <?php }
   }
 endif;
